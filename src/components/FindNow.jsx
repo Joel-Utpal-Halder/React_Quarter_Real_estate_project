@@ -4,22 +4,40 @@ import Button from "../components/CommonComponents/Button";
 import { FiSliders } from "react-icons/fi";
 
 const FindNow = () => {
-  const [districts, setDistricts] = useState([]); // Creates a state variable 'districts' to store the list of districts fetched from the API.
-  const [selectedDistrict, setSelectedDistrict] = useState(""); // Creates a state variable 'selectedDistrict' to hold the user’s chosen district.
-  const [propertyStatus, setPropertyStatus] = useState(""); // Creates a state variable to hold whether the property is for sale or rent.
-  const [propertyType, setPropertyType] = useState(""); //  to hold the type of property (apartment, house, commercial, etc.).
+  // ✅ State variables
+  const [districts, setDistricts] = useState([]); // Stores the list of districts fetched from the API
+  const [selectedDistrict, setSelectedDistrict] = useState(""); // Holds the user’s chosen district
+  const [propertyStatus, setPropertyStatus] = useState(""); // Holds whether the property is for sale or rent
+  const [propertyType, setPropertyType] = useState(""); // Holds the type of property (apartment, house, commercial, etc.)
+  const [loading, setLoading] = useState(false); // NEW: Tracks loading state
+  const [error, setError] = useState(null); // NEW: Tracks error state
 
+  // ✅ Fetch districts using async/await
   useEffect(() => {
-    fetch("https://bdapi.vercel.app/api/v.1/district")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data?.data) setDistricts(data.data);
-      })
-      .catch((err) => console.error("Error fetching districts:", err));
-  }, []);
+    const fetchDistricts = async () => {
+      setLoading(true); // Start loading before fetch
+      setError(null);   // Reset error before fetch
+      try {
+        const res = await fetch("https://bdapi.vercel.app/api/v.1/district"); // Await the API call
+        const data = await res.json(); // Await conversion to JSON
+        if (data?.data) {
+          setDistricts(data.data); // Save districts into state if data exists
+        }
+      } catch (err) {
+        console.error("Error fetching districts:", err); // Log error in console
+        setError("Failed to load districts. Please try again."); // Save error message in state
+      } finally {
+        setLoading(false); // Always stop loading after success or error
+      }
+    };
 
+    fetchDistricts(); // Call the async function
+  }, []); // Empty dependency array → runs only once when component mounts
+
+  // ✅ Handle form submit
   const handleFindNow = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent page reload
+    // Instead of console.log, you can later redirect or filter properties
     console.log("Search Params:", {
       district: selectedDistrict,
       status: propertyStatus,
@@ -42,6 +60,10 @@ const FindNow = () => {
               className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
             >
               <option value="">Choose Area</option>
+              {/* Show loading or error messages */}
+              {loading && <option>Loading districts...</option>}
+              {error && <option>{error}</option>}
+              {/* Map through districts if available */}
               {districts.map((district) => (
                 <option key={district.id} value={district.name}>
                   {district.name}
