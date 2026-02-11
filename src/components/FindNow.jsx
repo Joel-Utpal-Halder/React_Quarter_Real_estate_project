@@ -7,10 +7,10 @@ const FindNow = () => {
   // ✅ State variables
   const [districts, setDistricts] = useState([]); // Stores the list of districts fetched from the API
   const [selectedDistrict, setSelectedDistrict] = useState(""); // Holds the user’s chosen district
-  const [propertyStatus, setPropertyStatus] = useState(""); // Holds whether the property is for sale or rent
+  const [propertyStatus, setPropertyStatus] = useState(""); // Holds whether the property is for buy, ren or sale
   const [propertyType, setPropertyType] = useState(""); // Holds the type of property (apartment, house, commercial, etc.)
-  const [loading, setLoading] = useState(false); // NEW: Tracks loading state
-  const [error, setError] = useState(null); // NEW: Tracks error state
+  const [loading, setLoading] = useState(false); // Tracks loading state
+  const [error, setError] = useState(null); // Tracks error state
 
   // ✅ Fetch districts using async/await
   useEffect(() => {
@@ -80,8 +80,9 @@ const FindNow = () => {
               className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
             >
               <option value="">Property Status</option>
-              <option value="sale">For Sale</option>
+              <option value="buy">For Buy</option>
               <option value="rent">For Rent</option>
+              <option value="sale">For Sale</option>
             </select>
           </div>
 
