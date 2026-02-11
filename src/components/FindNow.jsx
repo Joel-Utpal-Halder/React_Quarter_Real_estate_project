@@ -44,7 +44,7 @@ const FindNow = () => {
       type: propertyType,
     });
   };
-
+console.log(handleFindNow)
   return (
     <div className="relative -mt-12 z-20 mb-10">
       <Container>
