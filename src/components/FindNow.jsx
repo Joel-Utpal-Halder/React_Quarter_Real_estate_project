@@ -37,7 +37,7 @@ const FindNow = () => {
   // ✅ Handle form submit
   const handleFindNow = (e) => {
     e.preventDefault(); // Prevent page reload
-    // Instead of console.log, you can later redirect or filter properties
+    // Instead of console.log, we can later redirect or filter properties
     console.log("Search Params:", {
       district: selectedDistrict,
       status: propertyStatus,
