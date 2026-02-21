@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Container from "../components/CommonComponents/Container";
 import Button from "../components/CommonComponents/Button";
 
@@ -58,13 +57,16 @@ const AboutUsOne = () => {
                   className="flex items-center space-x-3 bg-white p-3 rounded-lg shadow hover:shadow-md transition"
                 >
                   {/* Icon circle with its own hover effect */}
-                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-200 transition hover:bg-orange-500">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 transition
+                  hover:bg-orange-500 shrink-0">
                     <img
                       src={feature.icon}
                       alt={feature.title}
-                      className="w-6 h-6 filter brightness-0 saturate-100 hue-rotate-[20deg] transition hover:invert hover:brightness-100"
+                      className="w-6 h-6 object-contain filter brightness-0 saturate-100 hue-rotate-[20deg]
+                      transition hover:invert hover:brightness-100"
                     />
                   </div>
+
                   <h3 className="font-semibold text-gray-800 text-xs md:text-sm">
                     {feature.title}
                   </h3>
@@ -73,7 +75,7 @@ const AboutUsOne = () => {
             </div>
 
             {/* ✅ Quote block with light orange background + left border */}
-            <div className="bg-orange-100 p-3 border-l-[3px] border-orange-500 leading-relaxed">
+            <div className="bg-orange-100 p-3 border-l-[4px] border-orange-500 leading-relaxed">
               <p className="text-gray-700 text-xs md:text-sm">
                 "Elimad minim veniam, quis nostrud exercitation ullamco laboris.
                 Lorem ipsum dolor sit amet."
