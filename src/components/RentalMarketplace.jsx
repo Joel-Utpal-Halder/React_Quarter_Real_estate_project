@@ -16,7 +16,7 @@ const features = [
   { id: 4, icon: aboutIcon4, title: "Complete 24/7 Security" },
 ];
 
-const AboutUsOne = () => {
+const RentalMarketplace = () => {
   return (
     <div className="py-12 -mt-22 md:py-20 bg-gray-50">
       <Container>
@@ -97,4 +97,4 @@ const AboutUsOne = () => {
   );
 };
 
-export default AboutUsOne;
+export default RentalMarketplace;
