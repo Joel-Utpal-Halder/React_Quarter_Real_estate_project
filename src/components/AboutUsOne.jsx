@@ -9,7 +9,7 @@ import aboutIcon2 from "../assets/images/homePage/aboutIcon_2.png";
 import aboutIcon3 from "../assets/images/homePage/aboutIcon_3.png";
 import aboutIcon4 from "../assets/images/homePage/aboutIcon_4.png";
 
-// ✅ Features data (headline only, no description)
+// ✅ Features data
 const features = [
   { id: 1, icon: aboutIcon1, title: "Smart Home Design" },
   { id: 2, icon: aboutIcon2, title: "Beautiful Scene Around" },
@@ -18,10 +18,8 @@ const features = [
 ];
 
 const AboutUsOne = () => {
-  const [showMore, setShowMore] = useState(false);
-
   return (
-    <div className="py-12 md:py-20 bg-gray-50">
+    <div className="py-12 -mt-22 md:py-20 bg-gray-50">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* ✅ Left Side: Image */}
@@ -34,61 +32,62 @@ const AboutUsOne = () => {
           </div>
 
           {/* ✅ Right Side */}
-          <div className="space-y-6">
-            {/* Top Heading */}
-            <h4 className="text-orange-500 font-semibold uppercase tracking-wide">
+          <div className="space-y-4 md:space-y-5">
+            {/* Top Heading styled like a button */}
+            <span className="inline-block bg-orange-100 text-orange-600 font-semibold px-3 py-1 rounded-full text-xs md:text-sm">
               About Us
-            </h4>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
+            </span>
+
+            {/* Main Title */}
+            <h2 className="text-lg md:text-3xl font-bold text-gray-800">
               The Leading Real Estate Rental Marketplace
             </h2>
 
-            {/* ✅ Features List */}
-            <div className="grid grid-cols-2 gap-6">
+            {/* Two-line plain text below heading */}
+            <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
+              Over 39,000 people work for us in more than 70 countries all over
+              the world. This breadth of global coverage, combined with
+              specialist services.
+            </p>
+
+            {/* ✅ Features List (icons + title side by side) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {features.map((feature) => (
                 <div
                   key={feature.id}
-                  className="flex flex-col items-center text-center"
+                  className="flex items-center space-x-3 bg-white p-3 rounded-lg shadow hover:shadow-md transition"
                 >
-                  {/* Icon inside circle */}
-                  <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gray-200 hover:bg-orange-500 transition">
+                  {/* Icon circle with its own hover effect */}
+                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-200 transition hover:bg-orange-500">
                     <img
                       src={feature.icon}
                       alt={feature.title}
-                      className="w-8 h-8"
+                      className="w-6 h-6 filter brightness-0 saturate-100 hue-rotate-[20deg] transition hover:invert hover:brightness-100"
                     />
                   </div>
-                  <h3 className="mt-3 font-semibold text-gray-800">
+                  <h3 className="font-semibold text-gray-800 text-xs md:text-sm">
                     {feature.title}
                   </h3>
                 </div>
               ))}
             </div>
 
-            {/* ✅ Two-line text block with light orange background */}
-            <div className="bg-orange-100 p-4 rounded-md">
-              <p className="text-gray-700 text-sm">
-                Over 39,000 people work for us in more than 70 countries all
-                over the world. This breadth of global coverage, combined with
-                specialist services.
+            {/* ✅ Quote block with light orange background + left border */}
+            <div className="bg-orange-100 p-3 border-l-[3px] border-orange-500 leading-relaxed">
+              <p className="text-gray-700 text-xs md:text-sm">
+                "Elimad minim veniam, quis nostrud exercitation ullamco laboris.
+                Lorem ipsum dolor sit amet."
               </p>
             </div>
 
             {/* ✅ Single Button */}
             <Button
-              onClick={() => setShowMore(!showMore)}
-              className="bg-orange-500 text-white px-6 py-3"
+              onClick={() => window.location.href = "#"}
+              className="bg-orange-500 text-white px-5 py-2 text-sm md:text-base"
             >
-              {showMore ? "Show Less" : "Know More"}
+              Know More
             </Button>
 
-            {/* ✅ Toggle extra text */}
-            {showMore && (
-              <p className="text-gray-600 italic mt-2">
-                "Elimad minim veniam, quis nostrud exercitation ullamco laboris.
-                Lorem ipsum dolor sit amet."
-              </p>
-            )}
           </div>
         </div>
       </Container>
