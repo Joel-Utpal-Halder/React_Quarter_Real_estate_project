@@ -27,15 +27,15 @@ const rightImages = [sellsPropRight1, sellsPropRight2, sellsPropRight3];
 
 const SellsProperties = () => {
   return (
-    <div className="bg-white py-16">
+    <div className="bg-white py-30">
       <Container>
         {/* ✅ Two-Side Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
           {/* ✅ LEFT SIDE */}
-          <div>
+          <div className="flex flex-col justify-between h-full">
             {/* Section Header */}
             <div className="mb-8">
-              <span className="inline-block bg-pink-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+              <span className="inline-block bg-orange-100 text-orange-500 px-4 py-1 rounded-full text-sm font-medium">
                 About Us
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mt-4">
@@ -56,21 +56,21 @@ const SellsProperties = () => {
             </ul>
 
             {/* Property Features Row */}
-            <div className="flex items-center">
+            <div className="flex items-start">
               {propertyFeatures.map((feature, index) => (
                 <div
                   key={feature.id}
-                  className="flex flex-col items-center relative px-4"
+                  className="flex flex-col items-start relative px-4"
                 >
                   {/* Number + Icon */}
                   <div className="flex items-center space-x-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-gray-800">
+                    <h3 className="text-lg md:text-xl font-bold text-gray-800">
                       {feature.number}
                     </h3>
                     <span className="text-orange-500 text-lg">{feature.icon}</span>
                   </div>
                   {/* Text */}
-                  <p className="text-gray-600 text-xs md:text-sm mt-1">
+                  <p className="text-gray-600 text-xs md:text-sm mt-1 text-left">
                     {feature.text}
                   </p>
 
@@ -82,40 +82,41 @@ const SellsProperties = () => {
               ))}
             </div>
 
-            {/* Small Images */}
+
+            {/* Small Images (trimmed, hover effect) */}
             <div className="grid grid-cols-3 gap-4 mt-6">
               {leftImages.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  alt={`Property Left ${index + 1}`}
-                  className="rounded-lg shadow-md object-cover hover:scale-105 transition-transform duration-300"
-                />
+<img
+  key={index}
+  src={img}
+  alt={`Property Left ${index + 1}`}
+  className="object-cover rounded-sm h-full w-full border-[7px] border-white shadow-[0_0_15px_rgba(0,0,0,0.3)] hover:scale-105 transition-transform duration-300"
+/>
               ))}
             </div>
           </div>
 
           {/* ✅ RIGHT SIDE: Big + Two stacked smaller */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-3 md:gap-5 h-full">
             {/* Big Image */}
             <div className="col-span-1">
               <img
                 src={rightImages[0]}
                 alt="Big Property"
-                className="w-full h-full rounded-lg shadow-lg object-cover hover:scale-105 transition-transform duration-300"
+                className="w-full h-full shadow-lg object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
             {/* Two stacked smaller */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 md:gap-6">
               <img
                 src={rightImages[1]}
                 alt="Property Small 1"
-                className="rounded-lg shadow-lg object-cover hover:scale-105 transition-transform duration-300"
+                className="shadow-lg object-cover hover:scale-105 transition-transform duration-300 h-full w-full"
               />
               <img
                 src={rightImages[2]}
                 alt="Property Small 2"
-                className="rounded-lg shadow-lg object-cover hover:scale-105 transition-transform duration-300"
+                className="shadow-lg object-cover hover:scale-105 transition-transform duration-300 h-full w-full"
               />
             </div>
           </div>
