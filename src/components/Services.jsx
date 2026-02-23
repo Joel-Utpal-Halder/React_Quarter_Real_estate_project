@@ -18,7 +18,7 @@ const servicesData = [
     icon: servicesIcon1,
     title: "Buy a Home",
     description:
-      "Over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.",
+      "Over 1 million+ homes for sale available on the website. We can match you with a house you will want to call home.",
     linkText: "Find A Home",
   },
   {
@@ -26,7 +26,7 @@ const servicesData = [
     icon: servicesIcon2,
     title: "Rent a Home",
     description:
-      "Over 1 million+ homes for rent available on the website, we can match you with a house you will want to call home.",
+      "Over 1 million+ homes for rent available on the website. We can match you with a house you will want to call home.",
     linkText: "Find A Home",
   },
   {
@@ -34,24 +34,24 @@ const servicesData = [
     icon: servicesIcon3,
     title: "Sell a Home",
     description:
-      "Over 1 million+ homes listed for sale, we can help you connect with buyers and sell your property quickly.",
+      "Over 1 million+ homes for sale available on the website. We can match you with a house you will want to call home.",
     linkText: "Find A Home",
   },
 ];
 
 const Services = () => {
   return (
-    <div className="relative bg-gray-50 py-20">
+    <div className="relative bg-gray-50 py-25">
       {/* ✅ Decorative Shape on Left Side */}
       <img
         src={homePageShape1}
         alt="Decorative Shape"
-        className="absolute left-0 top-0 h-full w-32 object-cover opacity-20 hidden md:block"
+        className="absolute left-0 top-15 h-full w-32 object-cover opacity-80 hidden md:block"
       />
 
       <Container>
         {/* ✅ Section Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <span className="inline-block bg-orange-100 text-orange-500 px-4 py-1 rounded-full text-sm font-medium">
             Our Services
           </span>
@@ -65,27 +65,30 @@ const Services = () => {
           {servicesData.map((service) => (
             <div
               key={service.id}
-              className="bg-white rounded-lg shadow-md p-6 flex flex-col items-start hover:shadow-lg transition-shadow duration-300"
+              className="relative bg-white shadow-md p-10 flex flex-col items-center text-center 
+                         hover:shadow-gray-400 hover:shadow-lg transition-shadow duration-300
+                         after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 
+                         after:h-[3px] after:bg-orange-500 hover:after:w-full after:transition-all after:duration-300"
             >
               {/* Service Icon */}
               <img
                 src={service.icon}
                 alt={service.title}
-                className="h-12 w-12 mb-4"
+                className="h-20 w-20 mb-4" // ⬆️ Increased size
               />
 
               {/* Title */}
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
                 {service.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+              <p className="text-gray-600 text-xs md:text-sm leading-6 mb-4">
                 {service.description}
               </p>
 
               {/* Link with Arrow Icon */}
-              <button className="flex items-center text-orange-500 font-medium hover:text-orange-600 transition-colors duration-300">
+              <button className="flex items-center text-orange-500 font-medium hover:text-orange-600 transition-colors duration-300 cursor-pointer">
                 {service.linkText}
                 <FaArrowRight className="ml-2" />
               </button>
