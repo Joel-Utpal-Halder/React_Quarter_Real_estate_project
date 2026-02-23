@@ -6,6 +6,7 @@ import FindNow from '../components/FindNow'
 import RentalMarketplace from '../components/RentalMarketplace'
 import Review from '../components/Review'
 import SellsProperties from '../components/SellsProperties'
+import Services from '../components/Services'
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
     <RentalMarketplace />
     <Review />
     <SellsProperties />
+    <Services />
    </>
   )
 }
