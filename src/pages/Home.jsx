@@ -7,6 +7,7 @@ import RentalMarketplace from '../components/RentalMarketplace'
 import Review from '../components/Review'
 import SellsProperties from '../components/SellsProperties'
 import Services from '../components/Services'
+import PropertiesA from '../components/PropertiesA'
 
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
     <Review />
     <SellsProperties />
     <Services />
+    <PropertiesA />
    </>
   )
 }
