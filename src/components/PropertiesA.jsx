@@ -77,7 +77,7 @@ const propertiesData = [
 
 const PropertiesA = () => {
   return (
-    <div className="bg-gray-50 py-20 px-2 md:px-4 lg:px-6 max-w-[2200px] mx-auto">
+    <div className="py-20 px-2 md:px-4 lg:px-6 max-w-[2200px] mx-auto">
       {/* ✅ Section Header */}
       <div className="text-center mb-12">
         <span className="inline-block bg-orange-100 text-orange-500 px-4 py-1 rounded-full text-sm font-medium">
@@ -93,7 +93,7 @@ const PropertiesA = () => {
         {propertiesData.map((property) => (
           <div
             key={property.id}
-            className="bg-white shadow-md rounded-[2px] overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            className="bg-white shadow-md rounded-[2px] overflow-hidden hover:shadow-gray-400 hover:shadow-lg transition-shadow duration-300"
           >
             {/* Property Image with Overlay */}
             <div className="relative">
