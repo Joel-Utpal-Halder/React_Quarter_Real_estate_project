@@ -1,7 +1,8 @@
 // ✅ Import dependencies
 import React from "react";
-import { FaBed, FaBath, FaCar, FaRulerCombined, FaMapMarkerAlt } from "react-icons/fa";
-import { FaExpandArrowsAlt, FaRegHeart, FaPlusCircle } from "react-icons/fa";
+import { FaBed, FaBath, FaRulerCombined, FaMapMarkerAlt } from "react-icons/fa";
+import { FaRegHeart, FaPlusCircle } from "react-icons/fa";
+import { CgArrowsExpandRight } from "react-icons/cg";
 
 
 // ✅ Import images (property + agents)
@@ -27,7 +28,6 @@ const propertiesData = [
       "Beautiful Huge 1 Family House In Heart Of Westbury, Newly Renovated With New Wood",
     bedrooms: 3,
     bathrooms: 2,
-    parking: 2,
     area: "3450",
     agent: { name: "William Sekio", image: agentImg1 },
   },
@@ -41,7 +41,6 @@ const propertiesData = [
       "Beautiful Huge 1 Family House In Heart Of Westbury, Newly Renovated With New Wood",
     bedrooms: 3,
     bathrooms: 2,
-    parking: 2,
     area: "3450",
     agent: { name: "Alex Molsha", image: agentImg2 },
   },
@@ -55,7 +54,6 @@ const propertiesData = [
       "Beautiful Huge 1 Family House In Heart Of Westbury, Newly Renovated With New Wood",
     bedrooms: 3,
     bathrooms: 2,
-    parking: 2,
     area: "3450",
     agent: { name: "Shamim Osma", image: agentImg3 },
   },
@@ -69,7 +67,6 @@ const propertiesData = [
       "Beautiful Huge 1 Family House In Heart Of Westbury, Newly Renovated With New Wood",
     bedrooms: 3,
     bathrooms: 2,
-    parking: 2,
     area: "3450",
     agent: { name: "Kelvin Clein", image: agentImg4 },
   },
@@ -124,7 +121,7 @@ const PropertiesA = () => {
               </div>
             </div>
 
-            {/* Price directly below image */}
+            {/* Price below the image */}
             <div className="px-6 py-2">
               <span className="text-orange-500 font-bold text-sm">
                 {property.price}
@@ -208,7 +205,7 @@ const PropertiesA = () => {
                 <div className="flex items-center gap-1">
                   {/* Expand arrows */}
                   <button className="w-6 h-6 flex items-center justify-center bg-gray-200 rounded hover:bg-orange-500 transition-colors duration-200">
-                    <FaExpandArrowsAlt className="text-gray-600 hover:text-white" />
+                    <CgArrowsExpandRight className="text-gray-600 hover:text-white" />
                   </button>
 
                   {/* Heart outline */}
