@@ -18,7 +18,7 @@ const VideoBanner = () => {
   };
 
   return (
-    <section className="w-full relative">
+    <section className="w-full relative mb-10">
       {/* ✅ If video is playing, show video; otherwise show thumbnail */}
       {!isPlaying ? (
         <div className="relative w-full">
