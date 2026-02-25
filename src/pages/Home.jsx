@@ -9,6 +9,7 @@ import SellsProperties from '../components/SellsProperties'
 import Services from '../components/Services'
 import PropertiesA from '../components/PropertiesA'
 import ApartmentSketch from '../components/ApartmentSketch'
+import VideoBanner from '../components/VideoBanner'
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
     <Services />
     <PropertiesA />
     <ApartmentSketch />
+    <VideoBanner />
    </>
   )
 }
