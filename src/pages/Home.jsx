@@ -10,6 +10,7 @@ import Services from '../components/Services'
 import PropertiesA from '../components/PropertiesA'
 import ApartmentSketch from '../components/ApartmentSketch'
 import VideoBanner from '../components/VideoBanner'
+import PropertiesB from '../components/PropertiesB'
 
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Home = () => {
     <PropertiesA />
     <ApartmentSketch />
     <VideoBanner />
+    <PropertiesB />
    </>
   )
 }
