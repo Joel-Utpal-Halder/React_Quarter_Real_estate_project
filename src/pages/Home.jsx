@@ -11,6 +11,7 @@ import PropertiesA from '../components/PropertiesA'
 import ApartmentSketch from '../components/ApartmentSketch'
 import VideoBanner from '../components/VideoBanner'
 import PropertiesB from '../components/PropertiesB'
+import Testimonial from '../components/Testimonial'
 
 
 const Home = () => {
@@ -28,6 +29,7 @@ const Home = () => {
     <ApartmentSketch />
     <VideoBanner />
     <PropertiesB />
+    <Testimonial />
    </>
   )
 }
