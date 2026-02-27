@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const ExploreProperties = () => {
   return (
-    <section className="relative pt-0 pb-30 px-6 lg:px-20 -mt-10">
+    <section className="relative pt-0 pb-29 px-6 lg:px-20 -mt-10">
       
       <div className="max-w-[1050px] mx-auto bg-orange-600 text-white shadow-lg p-10 flex flex-col md:flex-row items-center justify-between">
         
