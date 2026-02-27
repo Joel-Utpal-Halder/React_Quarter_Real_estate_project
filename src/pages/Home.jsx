@@ -14,6 +14,7 @@ import PropertiesB from '../components/PropertiesB'
 import Testimonial from '../components/Testimonial'
 import NewsBlogs from '../components/NewsBlogs'
 import ExploreProperties from '../components/ExploreProperties'
+import Footer from '../components/Footer'
 
 
 const Home = () => {
@@ -34,6 +35,7 @@ const Home = () => {
     <Testimonial />
     <NewsBlogs />
     <ExploreProperties />
+    <Footer />
    </>
   )
 }
