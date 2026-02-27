@@ -21,7 +21,7 @@ const ExploreProperties = () => {
         <div className="md:w-1/3 flex justify-center md:justify-end">
           <a
             href="/properties" // navigates to another page
-            className="flex items-center gap-2 bg-white text-orange-600 px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors duration-300"
+            className="flex items-center gap-2 bg-white text-orange-600 px-6 py-3 rounded-[2px] font-semibold hover:bg-gray-100 transition-colors duration-300"
           >
             Explore Properties <FaArrowRight />
           </a>
