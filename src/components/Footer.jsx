@@ -1,7 +1,5 @@
-// components/Footer.jsx
 import React, { useState } from "react";
 import Container from "../components/CommonComponents/Container";
-// ✅ Reuse your existing Container for consistent layout
 import { FaFacebookF, FaTwitter, FaVimeoV, FaPinterestP, FaMapMarkerAlt } from "react-icons/fa";
 import logoOnlyHouse from "../assets/images/logo_onlyHouse.png";
 
@@ -10,7 +8,7 @@ const Footer = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
-    // Handle subscription logic (basic demo)
+    // Handle subscription logic
     const handleSubscribe = (e) => {
         e.preventDefault();
         if (email.trim() === "") {
@@ -22,13 +20,13 @@ const Footer = () => {
     };
 
     return (
-        <footer className="bg-gray-900 text-gray-300 py-10">
+        <footer className="bg-gray-900 text-gray-300 pt-44 -mt-50">
             <Container>
                 {/* Grid layout for footer sections */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8">
 
                     {/* About Us Section */}
-                    <div>
+                    <div className="sm:col-span-2">
                         <h3 className="text-white font-semibold mb-4">About Us</h3>
                         <p className="text-sm leading-relaxed mb-4">
                             Corporate clients and leisure travellers rely on Groundlink for dependable, safe, and professional chauffeur car service in major cities worldwide. Serving for more than 15 years.
@@ -71,34 +69,33 @@ const Footer = () => {
                     </div>
 
                     {/* Useful Links Section */}
-                    <div>
+                    <div className="sm:col-span-1">
                         <h3 className="text-white font-semibold mb-4">Useful Links</h3>
                         <ul className="space-y-2 text-sm">
-                            <li><a href="/about" className="hover:text-white">About</a></li>
-                            <li><a href="/news" className="hover:text-white">News</a></li>
-                            <li><a href="/partners" className="hover:text-white">Partners</a></li>
-                            <li><a href="/room-details" className="hover:text-white">Room Details</a></li>
-                            <li><a href="/gallery" className="hover:text-white">Gallery</a></li>
-                            <li><a href="/contacts" className="hover:text-white">Contacts</a></li>
+                            <li><a href="/about" className="hover:text-orange-500">About</a></li>
+                            <li><a href="/news" className="hover:text-orange-500">News</a></li>
+                            <li><a href="/partners" className="hover:text-orange-500">Partners</a></li>
+                            <li><a href="/room-details" className="hover:text-orange-500">Room Details</a></li>
+                            <li><a href="/gallery" className="hover:text-orange-500">Gallery</a></li>
+                            <li><a href="/contacts" className="hover:text-orange-500">Contacts</a></li>
                         </ul>
                     </div>
 
                     {/* Help Section */}
-                    <div>
+                    <div className="sm:col-span-1">
                         <h3 className="text-white font-semibold mb-4">Help?</h3>
                         <ul className="space-y-2 text-sm">
-                            <li><a href="/faq" className="hover:text-white">FAQ</a></li>
-                            <li><a href="/terms" className="hover:text-white">Terms & Conditions</a></li>
-                            <li><a href="/reporting" className="hover:text-white">Reporting</a></li>
-                            <li><a href="/docs" className="hover:text-white">Documentation</a></li>
-                            <li><a href="/support-policy" className="hover:text-white">Support Policy</a></li>
-                            <li><a href="/privacy" className="hover:text-white">Privacy</a></li>
+                            <li><a href="/faq" className="hover:text-orange-500">FAQ</a></li>
+                            <li><a href="/terms" className="hover:text-orange-500 text-[13px]">Terms & Conditions</a></li>
+                            <li><a href="/reporting" className="hover:text-orange-500">Reporting</a></li>
+                            <li><a href="/docs" className="hover:text-orange-500">Documentation</a></li>
+                            <li><a href="/support-policy" className="hover:text-orange-500">Support Policy</a></li>
+                            <li><a href="/privacy" className="hover:text-orange-500">Privacy</a></li>
                         </ul>
                     </div>
 
                     {/* Quarter Section */}
-                    <div>
-                        {/* Logo placed before the text "Quarter" */}
+                    <div className="sm:col-span-2">
                         <div className="flex items-center gap-1 mb-4">
                             <img
                                 src={logoOnlyHouse}
@@ -111,21 +108,23 @@ const Footer = () => {
                         <p className="text-sm leading-relaxed mb-4">
                             We are a team of designers and developers creating high quality Magento & Prestashop solutions.
                         </p>
-                        <p className="text-sm mb-2">📍 254 Lillian Blvd, Holbrook</p>
-
+                        <p className="text-sm mb-2 flex items-center gap-2">
+                            <FaMapMarkerAlt className="text-orange-500" />
+                            254 Lillian Blvd, Holbrook
+                        </p>
 
                         {/* Email Subscription */}
-                        <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2">
+                        <form onSubmit={handleSubscribe} className="relative w-full sm:w-auto mt-5">
                             <input
                                 type="email"
                                 placeholder="Enter email address"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="flex-1 px-3 py-2 rounded-md text-gray-900 focus:outline-none"
+                                className="w-full px-3 py-2 pr-24 rounded-md bg-white text-gray-900 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
                             />
                             <button
                                 type="submit"
-                                className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition"
+                                className="absolute right-1 top-1 bottom-1 px-4 rounded-md bg-red-600 text-white hover:bg-red-700 transition"
                             >
                                 Subscribe
                             </button>
@@ -133,16 +132,25 @@ const Footer = () => {
                         {message && <p className="text-xs mt-2 text-green-400">{message}</p>}
                     </div>
                 </div>
-
-                {/* Footer Bottom Note */}
-                <div className="border-t border-gray-700 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center text-sm">
-                    <p>© TunaThemes 2021. All rights reserved.</p>
-                    <div className="flex space-x-4 mt-2 sm:mt-0">
-                        <a href="/terms" className="hover:text-white">Terms of Use</a>
-                        <a href="/privacy" className="hover:text-white">Privacy Policy</a>
-                    </div>
-                </div>
             </Container>
+            
+            {/* Footer Bottom Note */}
+            <div className="w-full bg-[#303340] mt-25 py-6 ">
+                <Container>
+                    <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-300">
+                        {/* Left side: Copyright */}
+                        <p className="mb-2 sm:mb-0">
+                            © TunaThemes 2021. All rights reserved.
+                        </p>
+
+                        {/* Right side: Links */}
+                        <div className="flex space-x-6">
+                            <a href="/terms" className="hover:text-orange-500 transition">Terms of Use</a>
+                            <a href="/privacy" className="hover:text-orange-500 transition">Privacy Policy</a>
+                        </div>
+                    </div>
+                </Container>
+            </div>
         </footer>
     );
 };
