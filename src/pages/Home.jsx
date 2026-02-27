@@ -12,6 +12,7 @@ import ApartmentSketch from '../components/ApartmentSketch'
 import VideoBanner from '../components/VideoBanner'
 import PropertiesB from '../components/PropertiesB'
 import Testimonial from '../components/Testimonial'
+import NewsBlogs from '../components/NewsBlogs'
 
 
 const Home = () => {
@@ -30,6 +31,7 @@ const Home = () => {
     <VideoBanner />
     <PropertiesB />
     <Testimonial />
+    <NewsBlogs />
    </>
   )
 }
