@@ -7,10 +7,10 @@ const Menu = () => {
   // === Menu Items Data: Each object defines one menu link ===
   const menuItems = [
     { id: 1, name: "Home", link: "/" },
-    { id: 2, name: "Properties", link: "/properties" },
-    { id: 3, name: "Property", link: "/property" },
-    { id: 4, name: "Blog", link: "/blog" },
-    { id: 5, name: "Pages", link: "/pages" },
+    { id: 2, name: "About Us", link: "/about" },
+    { id: 3, name: "Services", link: "/services" },
+    { id: 4, name: "Properties", link: "/properties" },
+    { id: 5, name: "Blog", link: "/blog" },
     { id: 6, name: "Contact", link: "/contact" },
   ];
 
