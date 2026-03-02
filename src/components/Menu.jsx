@@ -34,7 +34,7 @@ const Menu = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white relative z-50">
       <Container>
         <div className="flex justify-between items-center py-4">
           {/* Left side: Logo */}
