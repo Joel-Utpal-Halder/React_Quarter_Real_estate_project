@@ -1,8 +1,11 @@
 import React from 'react'
+import TopPart from '../components/about/TopPart'
 
 const About = () => {
   return (
-    <div className='bg-green-500'>About</div>
+    <>
+      <TopPart />
+    </>
   )
 }
 
