@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-md text-sm">
+    <header className="bg-white shadow-md text-sm relative z-50">
       {/* Top bar with contact info and social icons */}
       <div className="bg-[#0A2C3D] text-white">
         <Container>
