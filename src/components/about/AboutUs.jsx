@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Container from "../commonComponents/Container";
 import Button from "../commonComponents/Button";
 
@@ -17,18 +19,66 @@ const features = [
 ];
 
 const AboutUs = () => {
+  const [showVideo, setShowVideo] = useState(false);
+
   return (
-    <div className="py-12 -mt-22 md:py-20 bg-gray-50">
+    <div className="py-12 md:py-20 bg-gray-50">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* ✅ Left Side: Image */}
-          <div className="w-full">
-            <img
-              src={aboutUsImage}
-              alt="About Us"
-              className="rounded-lg shadow-lg w-full object-cover"
-            />
-          </div>
+
+          
+{/* ✅ Left Side: Image with overlays */}
+<div className="relative w-full">
+  {/* Image with white border */}
+  <img
+    src={aboutUsImage}
+    alt="About Us"
+    className="rounded-lg shadow-lg w-full object-cover border-4 border-white"
+  />
+
+  {/* Top overlay write-up */}
+  <div className="absolute top-0 left-0 w-full bg-black/50 text-white px-4 py-3 rounded-t-lg">
+    <h3 className="text-sm md:text-lg font-semibold">
+      25+ Years of Experience
+    </h3>
+    <p className="text-xs md:text-sm">
+      Trusted globally for real estate rentals
+    </p>
+  </div>
+
+  {/* Bottom-left video overlay */}
+  <div className="absolute bottom-6 left-6 bg-black/70 w-40 h-24 rounded-lg flex items-center justify-center">
+    {/* Play button */}
+    <button
+      onClick={() => setShowVideo(true)} // state toggle
+      className="flex items-center justify-center w-10 h-10 bg-orange-500 text-white rounded-full shadow hover:bg-orange-600 transition"
+    >
+      ▶
+    </button>
+  </div>
+
+  {/* Video modal (conditionally rendered) */}
+  {showVideo && (
+    <div className="absolute inset-0 bg-black/80 flex items-center justify-center">
+      <video
+        src="/path-to-your-video.mp4"
+        controls
+        autoPlay
+        className="w-3/4 rounded-lg shadow-lg"
+      />
+      <button
+        onClick={() => setShowVideo(false)}
+        className="absolute top-4 right-4 text-white text-xl"
+      >
+        ✕
+      </button>
+    </div>
+  )}
+</div>
+
+
+
+
 
           {/* ✅ Right Side */}
           <div className="space-y-4 md:space-y-5">
