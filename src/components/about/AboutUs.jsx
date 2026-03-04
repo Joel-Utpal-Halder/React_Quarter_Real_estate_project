@@ -22,59 +22,58 @@ const AboutUs = () => {
   const [showVideo, setShowVideo] = useState(false);
 
   return (
-    <div className="py-12 md:py-20 bg-gray-50">
+    <div className="py-12 md:py-26 bg-gray-50">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
-          
-{/* ✅ Left Side: Image with overlays */}
-<div className="relative w-full">
-  {/* Image with white border */}
-  <img
-    src={aboutUsImage}
-    alt="About Us"
-    className="rounded-lg shadow-lg w-full object-cover border-4 border-white"
-  />
+          {/* ✅ Left Side: Image with overlays */}
+          <div className="relative w-full">
+            {/* Image with white border */}
+            <img
+              src={aboutUsImage}
+              alt="About Us"
+              className="rounded-sm shadow-gray-400 shadow-lg w-full object-cover border-12 border-white"
+            />
 
-  {/* Top overlay write-up */}
-  <div className="absolute top-0 left-0 w-full bg-black/50 text-white px-4 py-3 rounded-t-lg">
-    <h3 className="text-sm md:text-lg font-semibold">
-      25+ Years of Experience
-    </h3>
-    <p className="text-xs md:text-sm">
-      Trusted globally for real estate rentals
-    </p>
-  </div>
+            {/* Top overlay write-up */}
+            <div className="absolute top-7 left-3 w-80 bg-black/50 text-white ps-5 pt-6 py-2">
+              <h3 className="text-sm md:text-5xl font-bold">
+                25+ 
+              </h3>
+              <p className="text-xl md:text-xl ps-20 italic">
+                Years of Experience
+              </p>
+            </div>
 
-  {/* Bottom-left video overlay */}
-  <div className="absolute bottom-6 left-6 bg-black/70 w-40 h-24 rounded-lg flex items-center justify-center">
-    {/* Play button */}
-    <button
-      onClick={() => setShowVideo(true)} // state toggle
-      className="flex items-center justify-center w-10 h-10 bg-orange-500 text-white rounded-full shadow hover:bg-orange-600 transition"
-    >
-      ▶
-    </button>
-  </div>
+            {/* Bottom-left video overlay */}
+            <div className="absolute bottom-3 left-3 bg-gray-500/80 w-70 h-50 rounded-sm flex items-center justify-center">
+              {/* Play button */}
+              <button
+                onClick={() => setShowVideo(true)} // state toggle
+                className="flex items-center justify-center w-10 h-10 bg-orange-500 text-white rounded-full shadow hover:bg-orange-600 transition"
+              >
+                ▶
+              </button>
+            </div>
 
-  {/* Video modal (conditionally rendered) */}
-  {showVideo && (
-    <div className="absolute inset-0 bg-black/80 flex items-center justify-center">
-      <video
-        src="/path-to-your-video.mp4"
-        controls
-        autoPlay
-        className="w-3/4 rounded-lg shadow-lg"
-      />
-      <button
-        onClick={() => setShowVideo(false)}
-        className="absolute top-4 right-4 text-white text-xl"
-      >
-        ✕
-      </button>
-    </div>
-  )}
-</div>
+            {/* Video modal (conditionally rendered) */}
+            {showVideo && (
+              <div className="absolute inset-0 bg-black/80 flex items-center justify-center">
+                <video
+                  src="/path-to-the-video.mp4"
+                  controls
+                  autoPlay
+                  className="w-3/4 rounded-lg shadow-lg"
+                />
+                <button
+                  onClick={() => setShowVideo(false)}
+                  className="absolute top-4 right-4 text-white text-xl"
+                >
+                  ✕
+                </button>
+              </div>
+            )}
+          </div>
 
 
 
