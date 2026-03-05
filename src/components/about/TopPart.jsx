@@ -19,7 +19,7 @@ const TopPart = () => {
                     <img
                         src={aboutPageShape}
                         alt="Decorative shape"
-                        className="absolute left-20 -top-20 md:left-140 md:-top-65 md:w-50 md:h-30 lg:w-150 lg:h-100 z-0"
+                        className="absolute left-5 -top-40 md:left-140 md:-top-10 lg:left-123 lg:-top-70 md:w-50 md:h-30 lg:w-120 lg:h-100 z-0"
                     />
                 </div>
             </Container>
