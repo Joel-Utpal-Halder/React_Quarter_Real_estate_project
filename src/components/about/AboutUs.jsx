@@ -125,7 +125,7 @@ const AboutUs = () => {
 
             {/* ✅ Quote block with light orange background + left border */}
             <div className="bg-orange-100 p-3 border-l-[4px] border-orange-500 leading-relaxed">
-              <p className="text-gray-700 text-xs md:text-sm">
+              <p className="text-gray-700 font-medium text-xs md:text-sm">
                 "Elimad minim veniam, quis nostrud exercitation ullamco laboris.
                 Lorem ipsum dolor sit amet."
               </p>
@@ -136,7 +136,7 @@ const AboutUs = () => {
               onClick={() => window.location.href = "#"}
               className="bg-orange-500 text-white px-5 py-2 text-sm md:text-base"
             >
-              Know More
+              Make an Enquery
             </Button>
 
           </div>
