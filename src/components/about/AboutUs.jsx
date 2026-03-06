@@ -22,7 +22,7 @@ const AboutUs = () => {
   const [showVideo, setShowVideo] = useState(false);
 
   return (
-    <div className="py-12 md:py-26 bg-gray-50">
+    <div className="py-12 md:py-26">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
@@ -74,10 +74,6 @@ const AboutUs = () => {
               </div>
             )}
           </div>
-
-
-
-
 
           {/* ✅ Right Side */}
           <div className="space-y-4 md:space-y-5">
