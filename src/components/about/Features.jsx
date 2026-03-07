@@ -23,7 +23,7 @@ const Features = () => {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side: Text + Features */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             {/* Section label with light orange background */}
             <span className="inline-block bg-orange-100 text-orange-600 text-sm uppercase tracking-widest font-semibold px-3 py-1 rounded">
               Core Features
@@ -34,11 +34,11 @@ const Features = () => {
               Dream Living Space <br /> Setting New Standards
             </h2>
 
-            {/* Features list */}
+            {/* Features list as cards */}
             <div className="space-y-6">
               {/* Feature 1 */}
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center">
+              <div className="bg-white rounded-lg shadow-md p-6 flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow flex items-center justify-center">
                   <img src={icon1} alt="Residency Icon" className="w-6 h-6" />
                 </div>
                 <div>
@@ -53,8 +53,8 @@ const Features = () => {
               </div>
 
               {/* Feature 2 (highlighted in red) */}
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center">
+              <div className="bg-white rounded-lg shadow-md p-6 flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow flex items-center justify-center">
                   <img src={icon2} alt="Architect Icon" className="w-6 h-6" />
                 </div>
                 <div>
@@ -69,8 +69,8 @@ const Features = () => {
               </div>
 
               {/* Feature 3 */}
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center">
+              <div className="bg-white rounded-lg shadow-md p-6 flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow flex items-center justify-center">
                   <img src={icon3} alt="Storage Icon" className="w-6 h-6" />
                 </div>
                 <div>
