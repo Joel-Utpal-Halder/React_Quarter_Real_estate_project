@@ -1,5 +1,3 @@
-// File: src/components/about/Features.jsx
-
 import React from "react";
 import Container from "../commonComponents/Container";
 
@@ -17,7 +15,7 @@ const Features = () => {
       <img
         src={leftShape}
         alt="Decorative shape"
-        className="absolute left-0 top-0 w-24 md:w-40 lg:w-56"
+        className="absolute -left-18 top-65 w-24 md:w-40 lg:w-56"
       />
 
       <Container>
