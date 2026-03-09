@@ -43,7 +43,7 @@ const Features = () => {
                   <h3 className="text-lg font-semibold text-gray-800 group-hover:text-white">
                     The Perfect Residency
                   </h3>
-                  <p className="text-sm text-gray-600 group-hover:text-white">
+                  <p className="text-[13px] text-gray-600 group-hover:text-white">
                     Lorem ipsum dolor sit amet, consectetur adipisc do eiusmod
                     tempor incididunt ut labore et
                   </p>
@@ -59,7 +59,7 @@ const Features = () => {
                   <h3 className="text-lg font-semibold text-gray-800 group-hover:text-white">
                     Global Architect Experts
                   </h3>
-                  <p className="text-sm text-gray-600 group-hover:text-white">
+                  <p className="text-[13px] text-gray-600 group-hover:text-white">
                     Lorem ipsum dolor sit amet, consectetur adipisc do eiusmod
                     tempor incididunt ut labore et
                   </p>
@@ -75,7 +75,7 @@ const Features = () => {
                   <h3 className="text-lg font-semibold text-gray-800 group-hover:text-white">
                     Built-in Storage Cupboards
                   </h3>
-                  <p className="text-sm text-gray-600 group-hover:text-white">
+                  <p className="text-[13px] text-gray-600 group-hover:text-white">
                     Lorem ipsum dolor sit amet, consectetur adipisc do eiusmod
                     tempor incididunt ut labore et
                   </p>
