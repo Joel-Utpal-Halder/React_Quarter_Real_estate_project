@@ -35,7 +35,7 @@ const Features = () => {
             {/* Features list as cards */}
             <div className="space-y-6">
               {/* Feature 1 */}
-              <div className="bg-white rounded-lg shadow-md p-6 flex items-start gap-4 transition duration-300 hover:bg-orange-500 hover:text-white">
+              <div className="group bg-white rounded-sm shadow-md p-6 flex items-start gap-4 transition duration-300 hover:bg-orange-500 hover:text-white">
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow flex items-center justify-center transition duration-300 group-hover:bg-orange-600">
                   <img src={icon1} alt="Residency Icon" className="w-6 h-6" />
                 </div>
@@ -50,8 +50,9 @@ const Features = () => {
                 </div>
               </div>
 
+
               {/* Feature 2 */}
-              <div className="bg-white rounded-lg shadow-md p-6 flex items-start gap-4 transition duration-300 hover:bg-orange-500 hover:text-white">
+              <div className="group bg-white rounded-sm shadow-md p-6 flex items-start gap-4 transition duration-300 hover:bg-orange-500 hover:text-white">
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow flex items-center justify-center transition duration-300 group-hover:bg-orange-600">
                   <img src={icon2} alt="Architect Icon" className="w-6 h-6" />
                 </div>
@@ -67,7 +68,7 @@ const Features = () => {
               </div>
 
               {/* Feature 3 */}
-              <div className="bg-white rounded-lg shadow-md p-6 flex items-start gap-4 transition duration-300 hover:bg-orange-500 hover:text-white">
+              <div className="group bg-white rounded-sm shadow-md p-6 flex items-start gap-4 transition duration-300 hover:bg-orange-500 hover:text-white">
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow flex items-center justify-center transition duration-300 group-hover:bg-orange-600">
                   <img src={icon3} alt="Storage Icon" className="w-6 h-6" />
                 </div>
@@ -81,6 +82,7 @@ const Features = () => {
                   </p>
                 </div>
               </div>
+
             </div>
           </div>
 
