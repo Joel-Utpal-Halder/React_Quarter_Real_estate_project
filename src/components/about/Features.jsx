@@ -22,7 +22,7 @@ const Features = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           {/* Left side: Text + Features */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {/* Section label with light orange background */}
             <span className="inline-block bg-orange-100 text-orange-600 text-sm sentenceCase tracking-widest font-semibold px-3 py-1 rounded-full">
               Core Features
@@ -34,7 +34,7 @@ const Features = () => {
             </h2>
 
             {/* Features list as cards */}
-            <div className="space-y-6">
+            <div className="space-y-5">
               {/* Feature 1 */}
               <div className="group bg-white rounded-sm shadow-md p-6 flex items-start gap-4 transition duration-300 hover:bg-orange-500 hover:text-white">
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow flex items-center justify-center transition duration-300">
@@ -48,10 +48,8 @@ const Features = () => {
                     Lorem ipsum dolor sit amet, consectetur adipisc do eiusmod
                     tempor incididunt ut labore et
                   </p>
-
                 </div>
               </div>
-
 
               {/* Feature 2 */}
               <div className="group bg-white rounded-sm shadow-md p-6 flex items-start gap-4 transition duration-300 hover:bg-orange-500 hover:text-white">
@@ -66,7 +64,6 @@ const Features = () => {
                     Lorem ipsum dolor sit amet, consectetur adipisc do eiusmod
                     tempor incididunt ut labore et
                   </p>
-
                 </div>
               </div>
 
@@ -83,7 +80,6 @@ const Features = () => {
                     Lorem ipsum dolor sit amet, consectetur adipisc do eiusmod
                     tempor incididunt ut labore et
                   </p>
-
                 </div>
               </div>
             </div>
@@ -94,7 +90,7 @@ const Features = () => {
             <img
               src={rightImage}
               alt="Modern House"
-              className="w-full rounded-lg shadow-lg"
+              className="w-full rounded-sm shadow-md mt-18"
             />
           </div>
         </div>
