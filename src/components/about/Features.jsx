@@ -10,14 +10,14 @@ import icon3 from "../../assets/images/aboutPage/featuresIcon_3.png";
 
 const Features = () => {
   return (
-    <section className="relative bg-gray-100 py-16 font-nunito">
+    <section className="relative bg-gray-100 pt-27 pb-25 font-nunito">
+
       {/* Left decorative shape */}
       <img
         src={leftShape}
         alt="Decorative shape"
-        className="absolute -left-18 top-65 w-24 md:w-40 lg:w-56"
+        className="absolute -left-18 top-50 w-24 md:w-40 lg:w-56"
       />
-
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -27,14 +27,13 @@ const Features = () => {
             <span className="inline-block bg-orange-100 text-orange-600 text-sm sentenceCase tracking-widest font-semibold px-3 py-1 rounded-full">
               Core Features
             </span>
-
             {/* Section heading */}
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-snug">
               Dream Living Space <br /> Setting New Standards
             </h2>
-
             {/* Features list as cards */}
             <div className="space-y-5">
+              
               {/* Feature 1 */}
               <div className="group bg-white rounded-sm shadow-md p-6 flex items-start gap-4 transition duration-300 hover:bg-orange-500 hover:text-white">
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow flex items-center justify-center transition duration-300">
