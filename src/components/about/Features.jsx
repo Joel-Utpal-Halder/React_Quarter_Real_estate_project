@@ -23,7 +23,7 @@ const Features = () => {
           {/* Left side: Text + Features */}
           <div className="space-y-8">
             {/* Section label with light orange background */}
-            <span className="inline-block bg-orange-100 text-orange-600 text-sm uppercase tracking-widest font-semibold px-3 py-1 rounded">
+            <span className="inline-block bg-orange-100 text-orange-600 text-sm sentenceCase tracking-widest font-semibold px-3 py-1 rounded-full">
               Core Features
             </span>
 
