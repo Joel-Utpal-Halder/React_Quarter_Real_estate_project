@@ -6,6 +6,7 @@ import Container from "../commonComponents/Container";
 import mainFocusIcon1 from "../../assets/images/aboutPage/mainFocusIcon_1.png";
 import mainFocusIcon2 from "../../assets/images/aboutPage/mainFocusIcon_2.png";
 import mainFocusIcon3 from "../../assets/images/aboutPage/mainFocusIcon_3.png";
+import mainFocusHouseIcon from "../../assets/images/aboutPage/mainFocusHouseIcon.png"; // ✅ New icon
 
 // ✅ Import React Icons
 import { FaArrowRight } from "react-icons/fa";
@@ -37,6 +38,7 @@ const mainFocusData = [
     linkText: "Find A Home",
   },
 ];
+
 const MainFocus = () => {
   return (
     <div className="relative py-23">
@@ -46,7 +48,17 @@ const MainFocus = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mt-4">
             Our Main Focus
           </h2>
-          <p className="text-gray-600 text-[14px] pt-3 pb-5">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+
+          {/* ✅ New Icon under heading */}
+          <img
+            src={mainFocusHouseIcon}
+            alt="Main Focus House Icon"
+            className="mx-auto -mt-15 h-16 w-16"
+          />
+
+          <p className="text-gray-600 text-[14px] pt-3 pb-5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+          </p>
         </div>
 
         {/* ✅ Focus Grid */}
