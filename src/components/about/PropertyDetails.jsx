@@ -1,8 +1,5 @@
-// File: src/components/about/PropertyDetails.jsx
-
 import React from "react";
 import houseIcon from "../../assets/images/commonHouseIcon.png"; 
-
 const PropertyDetails = () => {
   return (
     <div className="font-nunito relative min-h-screen flex items-center justify-center">
@@ -13,12 +10,12 @@ const PropertyDetails = () => {
         <div className="bg-gray-800 col-span-2"></div>
       </div>
       
-      {/* Centered card (independent of background split) */}
-      <div className="relative bg-gray-200 rounded-lg shadow-xl max-w-3xl w-full p-8 space-y-6">
+      {/* Centered card */}
+      <div className="relative z-10 bg-white rounded-sm shadow-gray-400 shadow-xl max-w-3xl w-full p-8 space-y-6">
         
         {/* Headline */}
-        <h2 className="text-2xl font-bold text-gray-900 text-center">
-          Your Perfect & Modern Living Space Waits!
+        <h2 className="text-2xl font-bold text-gray-900 text-feft">
+          Your Perfect & Modern <br /> Living Space Waits!
         </h2>
         
         {/* Icon placed once under headline */}
