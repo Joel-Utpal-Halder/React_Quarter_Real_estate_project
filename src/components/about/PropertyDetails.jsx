@@ -7,7 +7,7 @@ const PropertyDetails = () => {
       {/* Background */}
       <div className="absolute inset-0 grid grid-cols-3">
         <div className="bg-white"></div>
-        <div className="bg-gray-800 col-span-2"></div>
+        <div className="bg-gray-300 col-span-2"></div>
       </div>
       
       {/* Centered card */}
