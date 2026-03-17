@@ -24,7 +24,7 @@ const PropertyDetails = () => {
         </div>
         
         {/* Short description */}
-        <p className="text-gray-700 text-center max-w-2xl mx-auto">
+        <p className="text-gray-700 text-start max-w-2xl mx-auto text-[13px] -mt-8">
           Sed perspiciatis unde omnis iste natus error sit voluptatem 
           laudantium totam rem aperiam eaque ipsa quae ab illo inventore 
           veritatis et quasi.
