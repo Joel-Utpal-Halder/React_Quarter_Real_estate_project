@@ -54,7 +54,7 @@ const PropertyDetails = () => {
       </div>
 
       {/* Centered card */}
-      <div className="relative z-9 bg-white rounded-sm shadow-gray-400 shadow-xl max-w-3xl w-200 h-[460px] px-8 py-10 space-y-6">
+      <div className="relative z-9 bg-white rounded-sm shadow-gray-400 shadow-xl max-w-3xl w-200 h-[460px] px-24 py-16 space-y-6">
         
         {/* Headline */}
         <h2 className="text-3xl font-bold text-gray-900 text-left tracking-wide leading-11">
@@ -63,7 +63,7 @@ const PropertyDetails = () => {
 
         {/* House Icon */}
         <div className="flex justify-center">
-          <img src={houseIcon} alt="house icon" className="w-10 h-10 -mt-4" />
+          <img src={houseIcon} alt="house icon" className="w-10 h-10 -mt-30" />
         </div>
 
         {/* Short description */}
@@ -93,7 +93,7 @@ const PropertyDetails = () => {
           </ul>
 
           {/* RIGHT SIDE: Dynamic property details */}
-          <div className="bg-red-600 text-white rounded-lg shadow-lg p-6 space-y-4">
+          <div className="bg-orange-600 text-white rounded-lg shadow-lg p-6 space-y-4">
             <h3 className="text-xl font-semibold text-center">
               {properties[selectedProperty].title}
             </h3>
