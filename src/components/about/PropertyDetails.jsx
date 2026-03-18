@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import houseIcon from "../../assets/images/commonHouseIcon.png"; 
 
 const PropertyDetails = () => {
-  // ✅ Define property data
+  // ✅ Property data
   const properties = {
     "The Studio": {
       title: "The Studio",
@@ -42,8 +42,8 @@ const PropertyDetails = () => {
     },
   };
 
-  // ✅ State to track selected property
-  const [selectedProperty, setSelectedProperty] = useState("Deluxe Portion");
+  // ✅ Default selection is "The Studio"
+  const [selectedProperty, setSelectedProperty] = useState("The Studio");
 
   return (
     <div className="font-nunito relative min-h-screen flex items-center justify-center">
@@ -76,14 +76,14 @@ const PropertyDetails = () => {
         {/* Two-column layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* LEFT SIDE: Property Types list */}
-          <ul className="space-y-3 text-gray-800 text-center md:text-left">
+          <ul className="space-y-3 text-gray-900 text-center md:text-left">
             {Object.keys(properties).map((item, index) => (
               <li
                 key={index}
                 onClick={() => setSelectedProperty(item)} // ✅ click handler
                 className={`cursor-pointer font-medium transition-colors ${
                   selectedProperty === item
-                    ? "text-red-600 font-semibold"
+                    ? "text-red-600 font-semibold" // active item highlighted orange/red
                     : "hover:text-red-600"
                 }`}
               >
