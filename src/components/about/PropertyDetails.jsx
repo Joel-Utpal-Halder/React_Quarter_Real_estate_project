@@ -11,7 +11,7 @@ const PropertyDetails = () => {
       </div>
       
       {/* Centered card */}
-      <div className="relative z-9 bg-white rounded-sm shadow-gray-400 shadow-xl max-w-3xl w-200 h-[460px] p-30 space-y-6">
+      <div className="relative z-9 bg-white rounded-sm shadow-gray-400 shadow-xl max-w-3xl w-200 h-[460px] px-30 py-20 space-y-6">
         
         {/* Headline */}
         <h2 className="text-3xl font-bold text-gray-900 text-left tracking-wide leading-11">
