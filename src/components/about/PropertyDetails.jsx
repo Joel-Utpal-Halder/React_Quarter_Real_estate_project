@@ -51,13 +51,13 @@ const PropertyDetails = () => {
         {/* Deluxe Portion Details */}
         <div className="bg-red-600 text-white rounded-lg shadow-lg p-6 space-y-4">
           <h3 className="text-xl font-semibold text-center">Deluxe Portion</h3>
-          <div className="grid grid-cols-2 gap-4 text-sm">
-            <p><span className="font-bold">Total Area:</span> 2800 Sq. Ft</p>
-            <p><span className="font-bold">Floor No.:</span> 15</p>
-            <p><span className="font-bold">Current Status:</span> Available</p>
-            <p><span className="font-bold">No. Of Rooms:</span> 6</p>
-            <p><span className="font-bold">Parking:</span> Yes</p>
-            <p><span className="font-bold">Price From:</span> $4,500</p>
+          <div className="space-y-2 text-sm">
+            <p><span className="font-bold">Total Area</span> .................................................... 2800 Sq. Ft</p>
+            <p><span className="font-bold">Floor No.</span> ............................................................................. 15</p>
+            <p><span className="font-bold">Current Status</span> ............................................. Available</p>
+            <p><span className="font-bold">No. Of Rooms</span> ................................................................... 6</p>
+            <p><span className="font-bold">Parking</span> ........................................................................... Yes</p>
+            <p><span className="font-bold">Price From</span> ...............................................................$4,500</p>
           </div>
         </div>
       </div>
