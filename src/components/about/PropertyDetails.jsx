@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import houseIcon from "../../assets/images/commonHouseIcon.png"; 
+import houseIcon from "../../assets/images/commonHouseIcon.png";
 
 const PropertyDetails = () => {
   // ✅ Property data
@@ -55,7 +55,7 @@ const PropertyDetails = () => {
 
       {/* Centered card */}
       <div className="relative z-9 bg-white rounded-sm shadow-gray-400 shadow-xl max-w-3xl w-180 h-[500px] px-24 py-16 space-y-6">
-        
+
         {/* Headline */}
         <h2 className="text-3xl font-bold text-gray-900 text-left tracking-wide leading-11">
           Your Perfect & Modern <br /> Living Space Waits!
@@ -68,8 +68,8 @@ const PropertyDetails = () => {
 
         {/* Short description */}
         <p className="text-gray-700 text-start max-w-2xl mx-auto text-[13px] -mt-10">
-          Sed perspiciatis unde omnis iste natus error sit voluptatem 
-          laudantium totam rem aperiam eaque ipsa quae ab illo inventore 
+          Sed perspiciatis unde omnis iste natus error sit voluptatem
+          laudantium totam rem aperiam eaque ipsa quae ab illo inventore
           veritatis et quasi.
         </p>
 
@@ -81,16 +81,16 @@ const PropertyDetails = () => {
               <li
                 key={index}
                 onClick={() => setSelectedProperty(item)} // ✅ click handler
-                className={`cursor-pointer font-medium transition-colors ${
-                  selectedProperty === item
-                    ? "text-red-600 font-semibold" // active item highlighted orange/red
-                    : "hover:text-red-600"
-                }`}
+                className={`cursor-pointer font-medium transition-colors ${selectedProperty === item
+                    ? "text-orange-600 underline font-semibold" // active item highlighted orange + underline
+                    : "hover:text-orange-600 hover:underline"   // others dark, underline + orange on hover
+                  }`}
               >
                 {item}
               </li>
             ))}
           </ul>
+
 
           {/* RIGHT SIDE: Dynamic property details */}
           <div className="bg-orange-600 text-white rounded-lg shadow-lg p-6 space-y-4">
