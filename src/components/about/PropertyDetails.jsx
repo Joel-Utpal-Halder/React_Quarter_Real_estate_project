@@ -48,13 +48,13 @@ const PropertyDetails = () => {
   return (
     <div className="font-nunito relative min-h-screen flex items-center justify-center">
       {/* Background split */}
-      <div className="absolute inset-0 grid grid-cols-3">
+      <div className="absolute inset-0 grid grid-cols-3 h-[700px]">
         <div className="bg-white"></div>
-        <div className="bg-gray-300 col-span-2"></div>
+        <div className="bg-gray-300 col-span-2 rounded-sm"></div>
       </div>
 
       {/* Centered card */}
-      <div className="relative z-9 bg-white rounded-sm shadow-gray-400 shadow-xl max-w-3xl w-180 h-[540px] px-24 py-16 space-y-6">
+      <div className="relative z-9 bg-white rounded-sm shadow-gray-400 shadow-xl max-w-3xl w-180 h-[540px] px-24 py-16 space-y-6 mt-20">
 
         {/* Headline */}
         <h2 className="text-3xl font-bold text-gray-900 text-left tracking-wide leading-11">
