@@ -54,7 +54,7 @@ const PropertyDetails = () => {
       </div>
 
       {/* Centered card */}
-      <div className="relative z-9 bg-white rounded-sm shadow-gray-400 shadow-xl max-w-3xl w-200 h-[460px] px-24 py-16 space-y-6">
+      <div className="relative z-9 bg-white rounded-sm shadow-gray-400 shadow-xl max-w-3xl w-180 h-[500px] px-24 py-16 space-y-6">
         
         {/* Headline */}
         <h2 className="text-3xl font-bold text-gray-900 text-left tracking-wide leading-11">
@@ -67,7 +67,7 @@ const PropertyDetails = () => {
         </div>
 
         {/* Short description */}
-        <p className="text-gray-700 text-start max-w-2xl mx-auto text-[13px] -mt-2">
+        <p className="text-gray-700 text-start max-w-2xl mx-auto text-[13px] -mt-10">
           Sed perspiciatis unde omnis iste natus error sit voluptatem 
           laudantium totam rem aperiam eaque ipsa quae ab illo inventore 
           veritatis et quasi.
