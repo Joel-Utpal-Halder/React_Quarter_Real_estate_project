@@ -54,7 +54,7 @@ const PropertyDetails = () => {
       </div>
 
       {/* Centered card */}
-      <div className="relative z-9 bg-white rounded-sm shadow-gray-400 shadow-xl max-w-3xl w-180 h-[500px] px-24 py-16 space-y-6">
+      <div className="relative z-9 bg-white rounded-sm shadow-gray-400 shadow-xl max-w-3xl w-180 h-[540px] px-24 py-16 space-y-6">
 
         {/* Headline */}
         <h2 className="text-3xl font-bold text-gray-900 text-left tracking-wide leading-11">
@@ -74,7 +74,7 @@ const PropertyDetails = () => {
         </p>
 
         {/* Two-column layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4">
           {/* LEFT SIDE: Property Types list */}
           <ul className="space-y-3 text-gray-900 text-center md:text-left">
             {Object.keys(properties).map((item, index) => (
@@ -82,8 +82,8 @@ const PropertyDetails = () => {
                 key={index}
                 onClick={() => setSelectedProperty(item)} // ✅ click handler
                 className={`cursor-pointer font-medium transition-colors ${selectedProperty === item
-                    ? "text-orange-600 underline font-semibold" // active item highlighted orange + underline
-                    : "hover:text-orange-600 hover:underline"   // others dark, underline + orange on hover
+                    ? "text-orange-600 underline font-semibold"
+                    : "hover:text-orange-600 hover:underline"
                   }`}
               >
                 {item}
@@ -91,19 +91,18 @@ const PropertyDetails = () => {
             ))}
           </ul>
 
-
           {/* RIGHT SIDE: Dynamic property details */}
-          <div className="bg-orange-600 text-white rounded-lg shadow-lg p-6 space-y-4">
-            <h3 className="text-xl font-semibold text-center">
+          <div className="bg-orange-600 text-white rounded-sm shadow-lg p-6 space-y-4 w-100">
+            <h3 className="text-lg font-semibold text-center">
               {properties[selectedProperty].title}
             </h3>
             <div className="space-y-2 text-sm">
-              <p><span className="font-bold">Total Area</span> — {properties[selectedProperty].area}</p>
-              <p><span className="font-bold">Floor No.</span> — {properties[selectedProperty].floor}</p>
-              <p><span className="font-bold">Current Status</span> — {properties[selectedProperty].status}</p>
-              <p><span className="font-bold">No. Of Rooms</span> — {properties[selectedProperty].rooms}</p>
-              <p><span className="font-bold">Parking</span> — {properties[selectedProperty].parking}</p>
-              <p><span className="font-bold">Price From</span> — {properties[selectedProperty].price}</p>
+              <p><span>Total Area</span> ................................................................... {properties[selectedProperty].area}</p>
+              <p><span>Floor No.</span> ........................................................................................... {properties[selectedProperty].floor}</p>
+              <p><span>Current Status</span> ........................................................... {properties[selectedProperty].status}</p>
+              <p><span>No. Of Rooms</span> ................................................................................. {properties[selectedProperty].rooms}</p>
+              <p><span>Parking</span> ........................................................................................... {properties[selectedProperty].parking}</p>
+              <p><span>Price From</span> ............................................................................ {properties[selectedProperty].price}</p>
             </div>
           </div>
         </div>
