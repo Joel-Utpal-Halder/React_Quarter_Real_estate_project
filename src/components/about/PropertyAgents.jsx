@@ -64,15 +64,15 @@ const PropertyAgents = () => {
               <div
                 className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm p-4 rounded-md shadow flex items-center gap-4 bg-white"
               >
-                {/* Social Icons on Left */}
-                <div className="flex flex-col gap-3 text-gray-500">
-                  <a href="#" className="hover:text-blue-600">
+                {/* Social Icons Column on Left */}
+                <div className="flex flex-col gap-3 bg-orange-500 p-3 rounded-md">
+                  <a href="#" className="text-white hover:text-gray-200">
                     <FaFacebookF />
                   </a>
-                  <a href="#" className="hover:text-sky-500">
+                  <a href="#" className="text-white hover:text-gray-200">
                     <FaTwitter />
                   </a>
-                  <a href="#" className="hover:text-red-600">
+                  <a href="#" className="text-white hover:text-gray-200">
                     <FaPinterestP />
                   </a>
                 </div>
@@ -85,6 +85,8 @@ const PropertyAgents = () => {
                   <p className="text-sm text-gray-600">{agent.role}</p>
                 </div>
               </div>
+
+
             </div>
           ))}
         </div>
