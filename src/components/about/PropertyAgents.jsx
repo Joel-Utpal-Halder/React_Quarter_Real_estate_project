@@ -54,18 +54,23 @@ const PropertyAgents = () => {
           {agents.map((agent, index) => (
             <div
               key={index}
-              className={`rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 border-4 border-white`}
+              className="relative rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 border-4 border-white"
             >
-              {/* Full Image fills the card */}
+              {/* Full Image fills the card, same tall size */}
               <img
                 src={agent.image}
                 alt={agent.name}
-                className="w-full h-64 object-cover"
+                className="w-full h-96 object-cover" 
+                /*
+                  - h-96: taller card height (24rem)
+                  - object-cover: ensures image fills card evenly
+                  - w-full: spans full width
+                */
               />
 
-              {/* Smaller Info Box */}
+              {/* Floating Info Box */}
               <div
-                className={`mx-auto mt-[-20px] relative z-10 p-4 w-11/12 max-w-xs rounded-md shadow bg-white ${
+                className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-xs p-4 rounded-md shadow text-center ${
                   agent.highlight ? "bg-red-100" : "bg-white"
                 }`}
               >
