@@ -16,19 +16,16 @@ const PropertyAgents = () => {
       name: "Nayem Mahmud",
       role: "Real Estate Broker",
       image: agentImage,
-      highlight: false,
     },
     {
       name: "Saidul Islam Sajid",
       role: "Selling Agent",
       image: agentImage,
-      highlight: true,
     },
     {
       name: "Tahmina Rummi",
       role: "Property Seller",
       image: agentImage,
-      highlight: false,
     },
   ];
 
@@ -56,31 +53,19 @@ const PropertyAgents = () => {
               key={index}
               className="relative rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 border-4 border-white"
             >
-              {/* Full Image fills the card, same tall size */}
+              {/* Full Image fills the card */}
               <img
                 src={agent.image}
                 alt={agent.name}
-                className="w-full h-96 object-cover" 
-                /*
-                  - h-96: taller card height (24rem)
-                  - object-cover: ensures image fills card evenly
-                  - w-full: spans full width
-                */
+                className="w-full h-96 object-cover"
               />
 
-              {/* Floating Info Box */}
+              {/* Floating Info Box (always white) */}
               <div
-                className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-xs p-4 rounded-md shadow text-center ${
-                  agent.highlight ? "bg-red-100" : "bg-white"
-                }`}
+                className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm p-4 rounded-md shadow flex items-center gap-4 bg-white"
               >
-                <h3 className="text-lg font-semibold text-gray-800">
-                  {agent.name}
-                </h3>
-                <p className="text-sm text-gray-600">{agent.role}</p>
-
-                {/* Social Icons */}
-                <div className="flex justify-center gap-4 mt-3 text-gray-500">
+                {/* Social Icons on Left */}
+                <div className="flex flex-col gap-3 text-gray-500">
                   <a href="#" className="hover:text-blue-600">
                     <FaFacebookF />
                   </a>
@@ -90,6 +75,14 @@ const PropertyAgents = () => {
                   <a href="#" className="hover:text-red-600">
                     <FaPinterestP />
                   </a>
+                </div>
+
+                {/* Text on Right */}
+                <div className="text-left">
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    {agent.name}
+                  </h3>
+                  <p className="text-sm text-gray-600">{agent.role}</p>
                 </div>
               </div>
             </div>
