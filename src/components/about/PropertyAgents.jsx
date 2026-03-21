@@ -51,45 +51,51 @@ const PropertyAgents = () => {
           </p>
         </div>
 
-        {/* Agents Grid */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {agents.map((agent, index) => (
-            <div
-              key={index}
-              className={`rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 ${
-                agent.highlight ? "bg-red-100" : "bg-white"
-              }`}
-            >
-              {/* Agent Image */}
-              <img
-                src={agent.image}
-                alt={agent.name}
-                className="w-full h-48 object-cover"
-              />
+{/* Agents Grid */}
+<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+  {agents.map((agent, index) => (
+    <div
+      key={index}
+      className={`rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 border-4 border-white ${
+        agent.highlight ? "bg-red-100" : "bg-white"
+      }`}
+    >
+      {/* Agent Image */}
+      <img
+        src={agent.image}
+        alt={agent.name}
+        className="w-full h-64 object-contain bg-gray-100" 
+        /* 
+          - w-full: takes full width of card
+          - h-64: fixed height (adjust as needed)
+          - object-contain: shows full image without cropping
+          - bg-gray-100: adds a neutral background so empty space looks clean
+        */
+      />
 
-              {/* Agent Info */}
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-gray-800">
-                  {agent.name}
-                </h3>
-                <p className="text-gray-600">{agent.role}</p>
+      {/* Agent Info */}
+      <div className="p-6 text-center">
+        <h3 className="text-xl font-semibold text-gray-800">
+          {agent.name}
+        </h3>
+        <p className="text-gray-600">{agent.role}</p>
 
-                {/* Social Icons */}
-                <div className="flex justify-center gap-4 mt-4 text-gray-500">
-                  <a href="#" className="hover:text-blue-600">
-                    <FaFacebookF />
-                  </a>
-                  <a href="#" className="hover:text-sky-500">
-                    <FaTwitter />
-                  </a>
-                  <a href="#" className="hover:text-red-600">
-                    <FaPinterestP />
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Social Icons */}
+        <div className="flex justify-center gap-4 mt-4 text-gray-500">
+          <a href="#" className="hover:text-blue-600">
+            <FaFacebookF />
+          </a>
+          <a href="#" className="hover:text-sky-500">
+            <FaTwitter />
+          </a>
+          <a href="#" className="hover:text-red-600">
+            <FaPinterestP />
+          </a>
         </div>
+      </div>
+    </div>
+  ))}
+</div>
       </Container>
     </section>
   );
