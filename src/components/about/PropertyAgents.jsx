@@ -1,18 +1,16 @@
 // File: src/components/about/PropertyAgents.jsx
 
 import React from "react";
-// Importing the Container component for consistent layout
 import Container from "../commonComponents/Container";
 
-// Importing images
+// Images
 import houseIcon from "../../assets/images/commonHouseIcon.png";
 import agentImage from "../../assets/images/aboutPage/propertyAgents_1.png";
 
-// Importing react-icons (already installed in your project)
+// React Icons
 import { FaFacebookF, FaTwitter, FaPinterestP } from "react-icons/fa";
 
 const PropertyAgents = () => {
-  // Data-driven approach: easier to scale if you add more agents later
   const agents = [
     {
       name: "Nayem Mahmud",
@@ -24,7 +22,7 @@ const PropertyAgents = () => {
       name: "Saidul Islam Sajid",
       role: "Selling Agent",
       image: agentImage,
-      highlight: true, // highlighted with red background
+      highlight: true,
     },
     {
       name: "Tahmina Rummi",
@@ -51,51 +49,47 @@ const PropertyAgents = () => {
           </p>
         </div>
 
-{/* Agents Grid */}
-<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-  {agents.map((agent, index) => (
-    <div
-      key={index}
-      className={`rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 border-4 border-white ${
-        agent.highlight ? "bg-red-100" : "bg-white"
-      }`}
-    >
-      {/* Agent Image */}
-      <img
-        src={agent.image}
-        alt={agent.name}
-        className="w-full h-64 object-contain bg-gray-100" 
-        /* 
-          - w-full: takes full width of card
-          - h-64: fixed height (adjust as needed)
-          - object-contain: shows full image without cropping
-          - bg-gray-100: adds a neutral background so empty space looks clean
-        */
-      />
+        {/* Agents Grid */}
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {agents.map((agent, index) => (
+            <div
+              key={index}
+              className={`rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 border-4 border-white`}
+            >
+              {/* Full Image fills the card */}
+              <img
+                src={agent.image}
+                alt={agent.name}
+                className="w-full h-64 object-cover"
+              />
 
-      {/* Agent Info */}
-      <div className="p-6 text-center">
-        <h3 className="text-xl font-semibold text-gray-800">
-          {agent.name}
-        </h3>
-        <p className="text-gray-600">{agent.role}</p>
+              {/* Smaller Info Box */}
+              <div
+                className={`mx-auto mt-[-20px] relative z-10 p-4 w-11/12 max-w-xs rounded-md shadow bg-white ${
+                  agent.highlight ? "bg-red-100" : "bg-white"
+                }`}
+              >
+                <h3 className="text-lg font-semibold text-gray-800">
+                  {agent.name}
+                </h3>
+                <p className="text-sm text-gray-600">{agent.role}</p>
 
-        {/* Social Icons */}
-        <div className="flex justify-center gap-4 mt-4 text-gray-500">
-          <a href="#" className="hover:text-blue-600">
-            <FaFacebookF />
-          </a>
-          <a href="#" className="hover:text-sky-500">
-            <FaTwitter />
-          </a>
-          <a href="#" className="hover:text-red-600">
-            <FaPinterestP />
-          </a>
+                {/* Social Icons */}
+                <div className="flex justify-center gap-4 mt-3 text-gray-500">
+                  <a href="#" className="hover:text-blue-600">
+                    <FaFacebookF />
+                  </a>
+                  <a href="#" className="hover:text-sky-500">
+                    <FaTwitter />
+                  </a>
+                  <a href="#" className="hover:text-red-600">
+                    <FaPinterestP />
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-    </div>
-  ))}
-</div>
       </Container>
     </section>
   );
