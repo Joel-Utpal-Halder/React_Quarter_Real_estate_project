@@ -54,13 +54,28 @@ const PropertyAgents = () => {
               >
                 {/* Social Icons Column */}
                 <div className="flex flex-col gap-3 bg-orange-500 p-3 rounded-md transition-colors duration-300 group-hover:bg-white">
-                  <a href="#" className="text-white group-hover:text-orange-500">
+                  <a
+                    href="https://www.facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white group-hover:text-orange-500"
+                  >
                     <FaFacebookF />
                   </a>
-                  <a href="#" className="text-white group-hover:text-orange-500">
+                  <a
+                    href="https://www.twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white group-hover:text-orange-500"
+                  >
                     <FaTwitter />
                   </a>
-                  <a href="#" className="text-white group-hover:text-orange-500">
+                  <a
+                    href="https://www.pinterest.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white group-hover:text-orange-500"
+                  >
                     <FaPinterestP />
                   </a>
                 </div>
@@ -71,6 +86,9 @@ const PropertyAgents = () => {
                   <p className="text-sm">{agent.role}</p>
                 </div>
               </div>
+
+
+
             </div>
           ))}
         </div>
