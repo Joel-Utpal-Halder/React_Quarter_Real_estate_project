@@ -12,21 +12,9 @@ import { FaFacebookF, FaTwitter, FaPinterestP } from "react-icons/fa";
 
 const PropertyAgents = () => {
   const agents = [
-    {
-      name: "Nayem Mahmud",
-      role: "Real Estate Broker",
-      image: agentImage,
-    },
-    {
-      name: "Saidul Islam Sajid",
-      role: "Selling Agent",
-      image: agentImage,
-    },
-    {
-      name: "Tahmina Rummi",
-      role: "Property Seller",
-      image: agentImage,
-    },
+    { name: "Nayem Mahmud", role: "Real Estate Broker", image: agentImage },
+    { name: "Saidul Islam Sajid", role: "Selling Agent", image: agentImage },
+    { name: "Tahmina Rummi", role: "Property Seller", image: agentImage },
   ];
 
   return (
@@ -60,33 +48,29 @@ const PropertyAgents = () => {
                 className="w-full h-96 object-cover"
               />
 
-              {/* Floating Info Box (always white) */}
+              {/* Floating Info Box */}
               <div
-                className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm p-4 rounded-md shadow flex items-center gap-4 bg-white"
+                className="group absolute bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm p-4 rounded-md shadow flex items-center gap-4 bg-white transition-colors duration-300 hover:bg-orange-500"
               >
-                {/* Social Icons Column on Left */}
-                <div className="flex flex-col gap-3 bg-orange-500 p-3 rounded-md">
-                  <a href="#" className="text-white hover:text-gray-200">
+                {/* Social Icons Column */}
+                <div className="flex flex-col gap-3 bg-orange-500 p-3 rounded-md transition-colors duration-300 group-hover:bg-white">
+                  <a href="#" className="text-white group-hover:text-orange-500">
                     <FaFacebookF />
                   </a>
-                  <a href="#" className="text-white hover:text-gray-200">
+                  <a href="#" className="text-white group-hover:text-orange-500">
                     <FaTwitter />
                   </a>
-                  <a href="#" className="text-white hover:text-gray-200">
+                  <a href="#" className="text-white group-hover:text-orange-500">
                     <FaPinterestP />
                   </a>
                 </div>
 
                 {/* Text on Right */}
-                <div className="text-left">
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    {agent.name}
-                  </h3>
-                  <p className="text-sm text-gray-600">{agent.role}</p>
+                <div className="text-left transition-colors duration-300 text-gray-800 group-hover:text-white">
+                  <h3 className="text-lg font-semibold">{agent.name}</h3>
+                  <p className="text-sm">{agent.role}</p>
                 </div>
               </div>
-
-
             </div>
           ))}
         </div>
