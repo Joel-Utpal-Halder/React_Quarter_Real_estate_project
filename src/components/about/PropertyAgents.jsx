@@ -16,7 +16,7 @@ const PropertyAgents = () => {
   ];
 
   return (
-    <section className="py-30 font-nunito">
+    <section className="py-38 font-nunito">
       <Container>
         {/* Section Heading */}
         <div className="text-center mb-10">
@@ -25,10 +25,9 @@ const PropertyAgents = () => {
             alt="House Icon"
             className="mx-auto w-12 h-12"
           />
-          <h2 className="text-3xl font-bold text-gray-800">Property Agents</h2>
-          <p className="text-gray-600 mt-2 max-w-xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Meet our
-            trusted agents who help you with property transactions.
+          <h2 className="text-3xl font-bold text-gray-800 -mt-6">Property Agents</h2>
+          <p className="text-gray-600 mt-2 max-w-xl mx-auto text-[14px]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
 
