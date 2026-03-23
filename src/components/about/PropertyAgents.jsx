@@ -36,18 +36,18 @@ const PropertyAgents = () => {
           {agents.map((agent, index) => (
             <div
               key={index}
-              className="relative rounded-sm shadow-gray-400 shadow-md overflow-hidden transition-transform border-4 border-white"
+              className="relative rounded-sm shadow-gray-400 shadow-md transition-transform border-4 border-white"
             >
               {/* Full Image fills the card */}
               <img
                 src={agent.image}
                 alt={agent.name}
-                className="w-full h-96 object-cover"
+                className="w-full h-96 object-cover z-0"
               />
 
               {/* Floating Info Box */}
               <div
-                className="group absolute bottom-0 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm p-4 rounded-sm shadow flex items-center gap-4 bg-white transition-colors duration-300 hover:bg-orange-500 z-10"
+                className="group absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm p-4 rounded-sm shadow flex items-center gap-4 bg-white transition-colors duration-300 hover:bg-orange-500 z-20"
               >
                 {/* Social Icons Column */}
                 <div className="flex flex-col gap-3 bg-orange-500 p-2 rounded-sm transition-colors duration-300 group-hover:bg-white">
@@ -79,14 +79,16 @@ const PropertyAgents = () => {
 
                 {/* Text on Right */}
                 <div className="text-left transition-colors duration-300 text-gray-800 group-hover:text-white">
-                  <h3 className="text-md font-semibold">{agent.name}</h3>
-                  <p className="text-sm">{agent.role}</p>
+                  <h3 className="text-md text-center font-semibold">{agent.name}</h3>
+                  <p className="text-sm text-center">{agent.role}</p>
                 </div>
-
               </div>
             </div>
           ))}
         </div>
+
+
+
       </Container>
     </section>
   );
