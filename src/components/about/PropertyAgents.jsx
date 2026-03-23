@@ -47,7 +47,7 @@ const PropertyAgents = () => {
 
               {/* Floating Info Box */}
               <div
-                className="group absolute bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm p-4 rounded-md shadow flex items-center gap-4 bg-white transition-colors duration-300 hover:bg-orange-500"
+                className="group absolute bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm p-4 rounded-sm shadow flex items-center gap-4 bg-white transition-colors duration-300 hover:bg-orange-500"
               >
                 {/* Social Icons Column */}
                 <div className="flex flex-col gap-3 bg-orange-500 p-2 rounded-sm transition-colors duration-300 group-hover:bg-white">
