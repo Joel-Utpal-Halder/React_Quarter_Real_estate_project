@@ -1,5 +1,3 @@
-// File: src/components/about/PropertyAgents.jsx
-
 import React from "react";
 import Container from "../commonComponents/Container";
 
@@ -18,14 +16,14 @@ const PropertyAgents = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-50 font-nunito">
+    <section className="py-30 font-nunito">
       <Container>
         {/* Section Heading */}
         <div className="text-center mb-10">
           <img
             src={houseIcon}
             alt="House Icon"
-            className="mx-auto mb-4 w-12 h-12"
+            className="mx-auto w-12 h-12"
           />
           <h2 className="text-3xl font-bold text-gray-800">Property Agents</h2>
           <p className="text-gray-600 mt-2 max-w-xl mx-auto">
