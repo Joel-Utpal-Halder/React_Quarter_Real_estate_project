@@ -36,7 +36,7 @@ const PropertyAgents = () => {
           {agents.map((agent, index) => (
             <div
               key={index}
-              className="relative rounded-sm shadow-gray-400 shadow-md overflow-hidden transition-transform border-15 border-white"
+              className="relative rounded-sm shadow-gray-400 shadow-md overflow-hidden transition-transform border-4 border-white"
             >
               {/* Full Image fills the card */}
               <img
@@ -47,7 +47,7 @@ const PropertyAgents = () => {
 
               {/* Floating Info Box */}
               <div
-                className="group absolute bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm p-4 rounded-sm shadow flex items-center gap-4 bg-white transition-colors duration-300 hover:bg-orange-500"
+                className="group absolute bottom-0 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm p-4 rounded-sm shadow flex items-center gap-4 bg-white transition-colors duration-300 hover:bg-orange-500 z-10"
               >
                 {/* Social Icons Column */}
                 <div className="flex flex-col gap-3 bg-orange-500 p-2 rounded-sm transition-colors duration-300 group-hover:bg-white">
@@ -82,10 +82,8 @@ const PropertyAgents = () => {
                   <h3 className="text-md font-semibold">{agent.name}</h3>
                   <p className="text-sm">{agent.role}</p>
                 </div>
+
               </div>
-
-
-
             </div>
           ))}
         </div>
