@@ -36,7 +36,7 @@ const PropertyAgents = () => {
           {agents.map((agent, index) => (
             <div
               key={index}
-              className="relative rounded-sm shadow-gray-400 shadow-md transition-transform border-4 border-white"
+              className="relative rounded-sm shadow-gray-400 shadow-md transition-transform border-12 border-white"
             >
               {/* Full Image fills the card */}
               <img
