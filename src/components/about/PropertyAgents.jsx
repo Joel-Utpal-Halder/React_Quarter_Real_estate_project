@@ -36,7 +36,7 @@ const PropertyAgents = () => {
           {agents.map((agent, index) => (
             <div
               key={index}
-              className="relative rounded-sm shadow-gray-400 shadow-md transition-transform border-12 border-white"
+              className="relative rounded-sm shadow-gray-400 shadow-md transition-transform border-14 border-white"
             >
               {/* Full Image fills the card */}
               <img
@@ -55,7 +55,7 @@ const PropertyAgents = () => {
                     href="https://www.facebook.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white group-hover:text-orange-500"
+                    className="flex items-center justify-center w-8 h-8 rounded-full text-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-300"
                   >
                     <FaFacebookF />
                   </a>
@@ -63,7 +63,7 @@ const PropertyAgents = () => {
                     href="https://www.twitter.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white group-hover:text-orange-500"
+                    className="flex items-center justify-center w-8 h-8 rounded-full  text-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-300"
                   >
                     <FaTwitter />
                   </a>
@@ -71,7 +71,7 @@ const PropertyAgents = () => {
                     href="https://www.pinterest.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white group-hover:text-orange-500"
+                    className="flex items-center justify-center w-8 h-8 rounded-full  text-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-300"
                   >
                     <FaPinterestP />
                   </a>
