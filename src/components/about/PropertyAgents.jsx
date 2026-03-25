@@ -50,7 +50,7 @@ const PropertyAgents = () => {
                 className="group absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm p-4 rounded-sm shadow flex items-center gap-4 bg-white transition-colors duration-300 hover:bg-orange-500 z-20"
               >
                 {/* Social Icons Column */}
-                <div className="flex flex-col gap-3 bg-orange-500 p-2 rounded-sm transition-colors duration-300 group-hover:bg-white">
+                <div className="flex flex-col bg-orange-500 py-2 px-1 rounded-sm transition-colors duration-300 group-hover:bg-white">
                   <a
                     href="https://www.facebook.com"
                     target="_blank"
