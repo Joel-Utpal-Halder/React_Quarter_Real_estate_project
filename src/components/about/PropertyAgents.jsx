@@ -45,44 +45,47 @@ const PropertyAgents = () => {
                 className="w-full h-96 object-cover z-0"
               />
 
-              {/* Floating Info Box */}
-              <div
-                className="group absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm p-4 rounded-sm shadow flex items-center gap-4 bg-white transition-colors duration-300 hover:bg-orange-500 z-20"
-              >
-                {/* Social Icons Column */}
-                <div className="flex flex-col bg-orange-500 py-2 px-1 rounded-sm transition-colors duration-300 group-hover:bg-white">
-                  <a
-                    href="https://www.facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-8 h-8 rounded-full text-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-300"
-                  >
-                    <FaFacebookF />
-                  </a>
-                  <a
-                    href="https://www.twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-8 h-8 rounded-full  text-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-300"
-                  >
-                    <FaTwitter />
-                  </a>
-                  <a
-                    href="https://www.pinterest.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-8 h-8 rounded-full  text-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-300"
-                  >
-                    <FaPinterestP />
-                  </a>
-                </div>
+{/* Floating Info Box */}
+<div
+  className="group absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm px-4 py-2 rounded-sm shadow flex items-center gap-4 bg-white transition-colors duration-300 hover:bg-orange-500 z-20"
+>
+  {/* Social Icons Column */}
+  <div className="flex flex-col gap-2 bg-orange-500 p-2 rounded-sm transition-colors duration-300 group-hover:bg-white">
+    <a
+      href="https://www.facebook.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center justify-center w-8 h-8 rounded-full text-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-300"
+    >
+      <FaFacebookF />
+    </a>
+    <a
+      href="https://www.twitter.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center justify-center w-8 h-8 rounded-full text-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-300"
+    >
+      <FaTwitter />
+    </a>
+    <a
+      href="https://www.pinterest.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center justify-center w-8 h-8 rounded-full text-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-300"
+    >
+      <FaPinterestP />
+    </a>
+  </div>
 
-                {/* Text on Right */}
-                <div className="text-left transition-colors duration-300 text-gray-800 group-hover:text-white">
-                  <h3 className="text-md text-center font-semibold">{agent.name}</h3>
-                  <p className="text-sm text-center">{agent.role}</p>
-                </div>
-              </div>
+  {/* Text on Right */}
+  <div className="text-left transition-colors duration-300 text-gray-800 group-hover:text-white">
+    <h3 className="text-md text-center font-semibold">{agent.name}</h3>
+    {/* Horizontal border */}
+    <div className="w-full border-t-[3px] border-orange-500 my-1"></div>
+    <p className="text-sm text-center">{agent.role}</p>
+  </div>
+</div>
+
             </div>
           ))}
         </div>
