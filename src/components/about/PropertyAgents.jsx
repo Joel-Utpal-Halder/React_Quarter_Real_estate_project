@@ -49,15 +49,17 @@ const PropertyAgents = () => {
 
               {/* Floating Info Box */}
               <div
-                className="group absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-10/12 max-w-sm h-28 px-3 py-1.5 rounded-sm border border-gray-200 shadow-sm flex items-center gap-3 bg-white transition-colors duration-300 hover:bg-orange-500 z-20"
+                className="group absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-9/12 max-w-sm h-22 px-3 py-1.5 rounded-sm border border-gray-200 shadow-sm flex items-center gap-3 bg-white transition-colors duration-300 hover:bg-orange-500 z-20"
               >
                 {/* Social Icons Column */}
-                <div className="flex flex-col gap-1 bg-orange-500 px-1 py-1 rounded-sm transition-colors duration-300 group-hover:bg-white">
+                <div className="flex flex-col gap-2 bg-orange-500 px-1 py-1 rounded-sm 
+                transition-colors duration-300 group-hover:bg-white ml-[-6px]">
                   <a
                     href="https://www.facebook.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-7 h-7 rounded-full text-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-300"
+                    className="flex items-center justify-center w-5 h-5 rounded-full text-[14px]
+               text-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-300"
                   >
                     <FaFacebookF />
                   </a>
@@ -65,7 +67,8 @@ const PropertyAgents = () => {
                     href="https://www.twitter.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-7 h-7 rounded-full text-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-300"
+                    className="flex items-center justify-center w-5 h-5 rounded-full text-[14px] 
+               text-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-300"
                   >
                     <FaTwitter />
                   </a>
@@ -73,7 +76,8 @@ const PropertyAgents = () => {
                     href="https://www.pinterest.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-7 h-7 rounded-full text-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-300"
+                    className="flex items-center justify-center w-5 h-5 rounded-full text-[14px] 
+               text-gray-800 hover:bg-orange-500 hover:text-white transition-colors duration-300"
                   >
                     <FaPinterestP />
                   </a>
