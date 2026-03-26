@@ -18,6 +18,7 @@ const PropertyAgents = () => {
   return (
     <section className="py-38 font-nunito">
       <Container>
+        
         {/* Section Heading */}
         <div className="text-center mb-10">
           <img
@@ -52,7 +53,7 @@ const PropertyAgents = () => {
                 className="group absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-9/12 max-w-sm h-22 px-3 py-1.5 rounded-sm border border-gray-200 shadow-sm flex items-center gap-3 bg-white transition-colors duration-300 hover:bg-orange-500 z-20"
               >
                 {/* Social Icons Column */}
-                <div className="flex flex-col gap-2 bg-orange-500 px-1 py-1 rounded-sm 
+                <div className="flex flex-col gap-1 bg-orange-500 px-1 py-1 rounded-sm 
                 transition-colors duration-300 group-hover:bg-white ml-[-6px]">
                   <a
                     href="https://www.facebook.com"
