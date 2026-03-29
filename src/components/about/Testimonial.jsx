@@ -87,12 +87,10 @@ const Testimonial = () => {
         <div className="relative py-20">
           {/* ✅ Section Header */}
           <div className="text-center mb-10">
-            <span className="inline-block bg-orange-100 text-orange-500 px-4 py-1 rounded-full text-sm font-medium">
-              Our Testimonial
-            </span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mt-4">
-              Clients Feedback
+              Clients Testimonial
             </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
           </div>
 
           {/* ✅ Carousel Wrapper */}
