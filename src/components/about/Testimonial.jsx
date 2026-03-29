@@ -5,13 +5,13 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 // ✅ Import images
 import houseIcon from "../../assets/images/commonHouseIcon.png";
-import quoteIcon from "../../assets/images/homePage/TestimonialIco_1.png";
-import leftShape from "../../assets/images/homePage/homePageShape_1.png";
-import rightShape from "../../assets/images/homePage/Testimonial_1.png"; // decorative only
-import img1 from "../../assets/images/homePage/Testimonial_2.png";
-import img2 from "../../assets/images/homePage/Testimonial_3.png";
-import img3 from "../../assets/images/homePage/Testimonial_4.png";
-import img4 from "../../assets/images/homePage/Testimonial_2.png";
+import quoteIcon from "../../assets/images/aboutPage/TestimonialIco_1.png";
+import leftShape from "../../assets/images/aboutPage/features_1.png";
+import rightShape from "../../assets/images/aboutPage/Testimonial_1.png";
+import img1 from "../../assets/images/aboutPage/Testimonial_2.png";
+import img2 from "../../assets/images/aboutPage/Testimonial_3.png";
+import img3 from "../../assets/images/aboutPage/Testimonial_4.png";
+import img4 from "../../assets/images/aboutPage/Testimonial_2.png";
 
 // ✅ Dynamic testimonial data
 const testimonials = [
@@ -70,6 +70,7 @@ const Testimonial = () => {
       {/* ✅ Background split */}
       <div className="absolute inset-0 -z-10">
         <div className="h-[63%] bg-gray-100"></div>
+        <div className="h-[37%] bg-white"></div>
       </div>
 
       {/* ✅ Decorative images */}
@@ -81,7 +82,7 @@ const Testimonial = () => {
       <img
         src={rightShape}
         alt="right decorative shape"
-        className="absolute top-20 right-20 w-40 md:w-56 opacity-75 pointer-events-none -z-10"
+        className="absolute top-5 right-20 w-40 md:w-70 md:h-80 text-gray-400 opacity-90 pointer-events-none -z-10"
       />
 
       <Container>
@@ -89,14 +90,16 @@ const Testimonial = () => {
           {/* ✅ Section Header */}
           <div className="text-center mb-10">
 
+            {/* House Icon */}
             <img
               src={houseIcon}
               alt="House Icon"
               className="mx-auto w-12 h-12 mt-8"
             />
+
+            {/* Section Heading and Description */}
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 -mt-9">
               Clients Testimonial
-
             </h2>
             <p className="text-gray-800 text-[13px] pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
           </div>
@@ -115,11 +118,12 @@ const Testimonial = () => {
                     className="min-w-full sm:min-w-[50%] lg:min-w-[33.33%] p-4 flex"
                   >
                     <div className="group relative bg-white shadow-md rounded-lg p-6 flex flex-col justify-between h-full w-full transition-all duration-300">
+
                       {/* Quote Icon */}
                       <img
                         src={quoteIcon}
                         alt="quote"
-                        className="w-8 h-8 mb-4 opacity-70"
+                        className="w-8 h-8 mb-4 opacity-80"
                       />
 
                       {/* Feedback */}
