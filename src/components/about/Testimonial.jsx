@@ -4,6 +4,7 @@ import Container from "../commonComponents/Container";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 // ✅ Import images
+import houseIcon from "../../assets/images/commonHouseIcon.png";
 import quoteIcon from "../../assets/images/homePage/TestimonialIco_1.png";
 import leftShape from "../../assets/images/homePage/homePageShape_1.png";
 import rightShape from "../../assets/images/homePage/Testimonial_1.png"; // decorative only
@@ -65,10 +66,10 @@ const Testimonial = () => {
 
   return (
     <div className="relative">
+
       {/* ✅ Background split */}
       <div className="absolute inset-0 -z-10">
-        <div className="h-[60%] bg-gray-100"></div>
-        <div className="h-[40%] bg-white"></div>
+        <div className="h-[63%] bg-gray-100"></div>
       </div>
 
       {/* ✅ Decorative images */}
@@ -84,17 +85,24 @@ const Testimonial = () => {
       />
 
       <Container>
-        <div className="relative py-20">
+        <div className="relative py-10">
           {/* ✅ Section Header */}
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mt-4">
+
+            <img
+              src={houseIcon}
+              alt="House Icon"
+              className="mx-auto w-12 h-12 mt-8"
+            />
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 -mt-9">
               Clients Testimonial
+
             </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+            <p className="text-gray-800 text-[13px] pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
           </div>
 
           {/* ✅ Carousel Wrapper */}
-          <div className="relative">
+          <div className="relative -mt-2">
             {/* Track viewport */}
             <div className="overflow-hidden">
               <div
