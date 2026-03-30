@@ -6,6 +6,7 @@ import MainFocus from '../components/about/MainFocus'
 import PropertyDetails from '../components/about/PropertyDetails'
 import PropertyAgents from '../components/about/PropertyAgents'
 import Testimonial from '../components/about/Testimonial'
+import Blogs from '../components/about/Blogs'
 
 const About = () => {
   return (
@@ -17,6 +18,7 @@ const About = () => {
       <PropertyDetails />
       <PropertyAgents />
       <Testimonial />
+      <Blogs />
     </>
   )
 }
