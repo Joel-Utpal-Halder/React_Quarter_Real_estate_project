@@ -6,7 +6,7 @@ import Container from "../commonComponents/Container";
 
 // Import images (adjust paths if needed)
 import commonHouseIcon from "../../assets/images/commonHouseIcon.png";
-import blogs_1 from "../../assets/images/aboutPage/blogs_1.png";
+import blogs_1 from "../../assets/images/aboutPage/blog_1.png";
 
 // Import react-icons (example: FaRegComment for comments)
 import { FaRegComment } from "react-icons/fa";
