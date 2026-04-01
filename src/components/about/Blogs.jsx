@@ -40,13 +40,11 @@ const Blogs = () => {
       <Container>
         {/* Section Title with Icon */}
         <div className="text-center mb-10 flex flex-col items-center">
-          {/* Icon */}
           <img
             src={commonHouseIcon}
             alt="Section Icon"
             className="w-12 h-12 mb-3"
           />
-          {/* Heading */}
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
             Read From Blogs
           </h2>
@@ -56,39 +54,41 @@ const Blogs = () => {
         </div>
 
         {/* Blog Cards Grid */}
-{/* Blog Cards Grid */}
-<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-  {blogPosts.map((post) => (
-    <div
-      key={post.id}
-      className="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col"
-    >
-      {/* Blog Image - make it taller */}
-      <img
-        src={post.image}
-        alt={post.title}
-        className="w-full h-64 object-cover" // increased height from h-48 → h-64
-      />
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {blogPosts.map((post) => (
+            <div
+              key={post.id}
+              className="relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+              {/* Full-size Image */}
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-80 object-cover" // taller image
+              />
 
-      {/* Blog Content */}
-      <div className="p-5 flex-1 flex flex-col justify-between">
-        {/* Date and Comments */}
-        <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
-          <span>{post.date}</span>
-          <span className="flex items-center gap-1">
-            <FaRegComment className="text-gray-400" />
-            {post.comments} Comments
-          </span>
+              {/* Overlay Gradient for readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+
+              {/* Bottom Card Content */}
+              <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-4 m-4 rounded-md shadow-md">
+                {/* Date and Comments */}
+                <div className="flex items-center justify-between text-sm text-gray-600 mb-2">
+                  <span>{post.date}</span>
+                  <span className="flex items-center gap-1">
+                    <FaRegComment className="text-gray-500" />
+                    {post.comments} Comments
+                  </span>
+                </div>
+
+                {/* Blog Title */}
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800 hover:text-blue-600 cursor-pointer">
+                  {post.title}
+                </h3>
+              </div>
+            </div>
+          ))}
         </div>
-
-        {/* Blog Title */}
-        <h3 className="text-lg font-semibold text-gray-800 hover:text-blue-600 cursor-pointer">
-          {post.title}
-        </h3>
-      </div>
-    </div>
-  ))}
-</div>
       </Container>
     </section>
   );
