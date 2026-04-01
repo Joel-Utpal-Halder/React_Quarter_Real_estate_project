@@ -1,5 +1,3 @@
-// File: src/components/about/Blogs.jsx
-
 import React from "react";
 import Container from "../commonComponents/Container";
 
@@ -64,11 +62,8 @@ const Blogs = () => {
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-full h-80 object-cover" // taller image
+                className="w-full h-90 object-cover"
               />
-
-              {/* Overlay Gradient for readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
 
               {/* Bottom Card Content */}
               <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-4 m-4 rounded-md shadow-md">
