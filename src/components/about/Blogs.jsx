@@ -1,12 +1,13 @@
+// File: src/components/about/Blogs.jsx
+
 import React from "react";
 import Container from "../commonComponents/Container";
 
 // Import images
 import commonHouseIcon from "../../assets/images/commonHouseIcon.png";
 import blogs_1 from "../../assets/images/aboutPage/blog_1.png";
-
-// Import react-icons
-import { FaRegComment } from "react-icons/fa";
+import blogIcon_1 from "../../assets/images/aboutPage/blogIcon_1.png";
+import blogIcon_2 from "../../assets/images/aboutPage/blogIcon_2.png";
 
 const Blogs = () => {
   const blogPosts = [
@@ -34,7 +35,7 @@ const Blogs = () => {
   ];
 
   return (
-    <section className="py-12 bg-white font-nunito">
+    <section className="py-12 mb-35 bg-white font-nunito">
       <Container>
         {/* Section Title with Icon */}
         <div className="text-center mb-10 flex flex-col items-center">
@@ -56,22 +57,36 @@ const Blogs = () => {
           {blogPosts.map((post) => (
             <div
               key={post.id}
-              className="relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="relative rounded-sm shadow-md hover:shadow-lg transition-shadow duration-300"
             >
               {/* Full-size Image */}
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-full h-90 object-cover"
+                className="w-full h-80 object-cover"
               />
 
               {/* Bottom Card Content */}
-              <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-4 m-4 rounded-md shadow-md">
-                {/* Date and Comments */}
+              <div className="absolute -bottom-20 left-0 right-0 bg-white/90 backdrop-blur-sm p-4 m-4 rounded-md shadow-md">
+                {/* Date and Comments with custom icons */}
                 <div className="flex items-center justify-between text-sm text-gray-600 mb-2">
-                  <span>{post.date}</span>
-                  <span className="flex items-center gap-1">
-                    <FaRegComment className="text-gray-500" />
+                  {/* Date with icon */}
+                  <span className="flex items-center gap-2">
+                    <img
+                      src={blogIcon_1}
+                      alt="Date Icon"
+                      className="w-4 h-4"
+                    />
+                    {post.date}
+                  </span>
+
+                  {/* Comments with icon */}
+                  <span className="flex items-center gap-2">
+                    <img
+                      src={blogIcon_2}
+                      alt="Comments Icon"
+                      className="w-4 h-4"
+                    />
                     {post.comments} Comments
                   </span>
                 </div>
