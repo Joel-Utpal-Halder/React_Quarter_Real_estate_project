@@ -1,5 +1,3 @@
-// File: src/components/about/Blogs.jsx
-
 import React from "react";
 import Container from "../commonComponents/Container";
 
@@ -42,12 +40,12 @@ const Blogs = () => {
           <img
             src={commonHouseIcon}
             alt="Section Icon"
-            className="w-12 h-12 mb-3"
+            className="w-12 h-12 -mb-7"
           />
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
             Read From Blogs
           </h2>
-          <p className="text-gray-500 mt-2">
+          <p className="text-[13px] text-gray-400 mt-1">
             Lorem ipsum dolor sit amet, consectetur adipiscing.
           </p>
         </div>
@@ -63,11 +61,11 @@ const Blogs = () => {
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-full h-80 object-cover"
+                className="w-full h-85 object-cover rounded-sm shadow-gray-400 shadow-lg"
               />
 
               {/* Bottom Card Content */}
-              <div className="absolute -bottom-20 left-0 right-0 bg-white/90 backdrop-blur-sm p-4 m-4 rounded-md shadow-md">
+              <div className="absolute -bottom-20 left-0 right-0 bg-white/90 p-4 m-4 rounded-sm shadow-sm hover:shadow-md">
                 {/* Date and Comments with custom icons */}
                 <div className="flex items-center justify-between text-sm text-gray-600 mb-2">
                   {/* Date with icon */}
