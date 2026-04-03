@@ -65,15 +65,15 @@ const Blogs = () => {
               />
 
               {/* Bottom Card Content */}
-              <div className="absolute -bottom-20 left-0 right-0 bg-white/90 p-4 m-4 rounded-sm shadow-sm hover:shadow-md">
+              <div className="absolute -bottom-18 left-0 right-0 bg-white/90 p-4 m-4 rounded-sm shadow-sm hover:shadow-md">
                 {/* Date and Comments with custom icons */}
-                <div className="flex items-center justify-between text-sm text-gray-600 mb-2">
+                <div className="flex justify-start gap-2 text-[12px] text-gray-600 mb-2">
                   {/* Date with icon */}
                   <span className="flex items-center gap-2">
                     <img
                       src={blogIcon_1}
                       alt="Date Icon"
-                      className="w-4 h-4"
+                      className="w-3 h-3"
                     />
                     {post.date}
                   </span>
@@ -83,14 +83,14 @@ const Blogs = () => {
                     <img
                       src={blogIcon_2}
                       alt="Comments Icon"
-                      className="w-4 h-4"
+                      className="w-3 h-3"
                     />
                     {post.comments} Comments
                   </span>
                 </div>
 
                 {/* Blog Title */}
-                <h3 className="text-base sm:text-lg font-semibold text-gray-800 hover:text-blue-600 cursor-pointer">
+                <h3 className="text-base sm:text-md font-semibold text-gray-800 hover:text-orange-600 cursor-pointer">
                   {post.title}
                 </h3>
               </div>
