@@ -11,21 +11,21 @@ const Blogs = () => {
   const blogPosts = [
     {
       id: 1,
-      date: "July 27, 2021",
+      date: "Apri 03, 2026",
       comments: 1,
       title: "Get Best Advertiser In Your Side Pocket",
       image: blogs_1,
     },
     {
       id: 2,
-      date: "July 27, 2021",
+      date: "Apri 03, 2026",
       comments: 4,
       title: "Realtors, you know you can’t be good at your",
       image: blogs_1,
     },
     {
       id: 3,
-      date: "Jan 24, 2021",
+      date: "Apri 03, 2026",
       comments: 3,
       title: "More value to your clients Happy reading!",
       image: blogs_1,
