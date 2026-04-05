@@ -1,10 +1,13 @@
 // File: src/components/services/Services.jsx
 
 import React from "react";
-// Import the Container component you already created for consistent layout
 import Container from "../commonComponents/Container";
 
-// Importing service icons (make sure these files exist in your assets folder)
+
+// ✅ Import the home icon
+import homeIcon from "../../assets/images/commonHouseIcon.png";
+
+// Importing service icons
 import serviceIcon1 from "../../assets/images/servicePage/serviceIcon_1.png";
 import serviceIcon2 from "../../assets/images/servicePage/serviceIcon_2.png";
 import serviceIcon3 from "../../assets/images/servicePage/serviceIcon_3.png";
@@ -12,7 +15,7 @@ import serviceIcon4 from "../../assets/images/servicePage/serviceIcon_4.png";
 import serviceIcon5 from "../../assets/images/servicePage/serviceIcon_5.png";
 import serviceIcon6 from "../../assets/images/servicePage/serviceIcon_6.png";
 
-// Create an array of services for easy mapping
+// Array of services
 const services = [
   {
     id: 1,
@@ -61,14 +64,20 @@ const services = [
 const Services = () => {
   return (
     <section className="py-16 bg-gray-50 font-nunito">
-      {/* Using your Container component for consistent padding and max-width */}
       <Container>
-        {/* Section Heading */}
-        <div className="text-center mb-12">
+        {/* Section Heading with Home Icon */}
+        <div className="text-center mb-12 flex flex-col items-center">
+          {/* Home Icon above the title */}
+          <img
+            src={homeIcon}
+            alt="Home Icon"
+            className="w-12 h-12 mb-4"
+          />
+
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
             Our Core Services
           </h2>
-          <p className="mt-2 text-gray-600">
+          <p className="mt-2 text-gray-600 max-w-xl">
             Explore the range of services we provide to support your real estate journey.
           </p>
         </div>
@@ -93,9 +102,7 @@ const Services = () => {
               </h3>
 
               {/* Service Description */}
-              <p className="text-gray-600 text-sm">
-                {service.description}
-              </p>
+              <p className="text-gray-600 text-sm">{service.description}</p>
             </div>
           ))}
         </div>
