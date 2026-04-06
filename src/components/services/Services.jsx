@@ -50,7 +50,7 @@ const Services = () => {
               <img
                 src={service.icon}
                 alt={service.title}
-                className="w-16 h-16 mb-4 transition duration-300 group-hover:brightness-0 group-hover:invert group-hover:sepia group-hover:hue-rotate-15 group-hover:saturate-200 group-hover:filter-orange"
+                className="w-16 h-16 mb-4 transition duration-300 group-hover:filter group-hover:brightness-0 group-hover:sepia group-hover:saturate-500 group-hover:hue-rotate-[330deg]"
               />
 
               {/* Service Title */}
