@@ -44,13 +44,13 @@ const Services = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="group relative bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300"
+              className="group relative bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center transition-shadow duration-300 hover:shadow-2xl"
             >
               {/* Service Icon */}
               <img
                 src={service.icon}
                 alt={service.title}
-                className="w-16 h-16 mb-4 transition duration-300 group-hover:filter group-hover:brightness-0 group-hover:sepia group-hover:saturate-500 group-hover:hue-rotate-[330deg]"
+                className="w-16 h-16 mb-4 transition duration-300 group-hover:filter group-hover:sepia group-hover:saturate-[500%] group-hover:hue-rotate-[330deg]"
               />
 
               {/* Service Title */}
