@@ -1,5 +1,3 @@
-// File: src/components/services/Services.jsx
-
 import React from "react";
 import Container from "../commonComponents/Container";
 
@@ -26,16 +24,16 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-16 bg-gray-50 font-nunito">
+    <section className="pt-18 pb-35 font-nunito">
       <Container>
         {/* Section Heading with Home Icon */}
         <div className="text-center mb-12 flex flex-col items-center">
-          <img src={homeIcon} alt="Home Icon" className="w-12 h-12 mb-4" />
+          <img src={homeIcon} alt="Home Icon" className="w-12 h-12 -mb-8" />
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
             Our Core Services
           </h2>
-          <p className="mt-2 text-gray-600 max-w-xl">
-            Explore the range of services we provide to support your real estate journey.
+          <p className="mt-2 text-[13px] text-gray-500 max-w-xl">
+            Lorem ipsum dolor sit amet, consectetur adipisicing.
           </p>
         </div>
 
@@ -44,7 +42,7 @@ const Services = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="group relative bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center transition-shadow duration-300 hover:shadow-2xl"
+              className="group relative shadow-md shadow-gray-400 rounded-sm px-8 py-6 flex flex-col items-center text-center transition-shadow duration-300 hover:shadow-lg hover:shadow-gray-500"
             >
               {/* Service Icon */}
               <img
@@ -59,7 +57,7 @@ const Services = () => {
               </h3>
 
               {/* Service Description */}
-              <p className="text-gray-600 text-sm">{service.description}</p>
+              <p className="text-gray-500 text-[12px]">{service.description}</p>
 
               {/* Orange underline at bottom of card */}
               <span className="absolute bottom-0 left-0 h-[3px] w-0 bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
