@@ -42,7 +42,7 @@ const Services = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="group relative shadow-md shadow-gray-400 rounded-sm px-8 py-6 flex flex-col items-center text-center transition-shadow duration-300 hover:shadow-lg hover:shadow-gray-500"
+              className="group relative bg-gray-50 shadow-md shadow-gray-400 rounded-sm px-8 py-6 flex flex-col items-center text-center transition-shadow duration-300 hover:shadow-lg hover:shadow-gray-600"
             >
               {/* Service Icon */}
               <img
