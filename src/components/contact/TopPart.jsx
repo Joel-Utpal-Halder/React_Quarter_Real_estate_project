@@ -12,7 +12,7 @@ const TopPart = () => {
                         className="text-3xl sm:text-4xl lg:text-5xl font-bold top-14 left-0 absolute transform translate-y-1/2"
                         style={{ color: "#0A2C3D" }}
                     >
-                        Services
+                        Contact Us
                     </h1>
 
                     {/* Decorative image*/}
