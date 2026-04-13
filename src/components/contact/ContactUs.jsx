@@ -7,7 +7,7 @@ const ContactUs = () => {
     <Container>
       {/* Card wrapper */}
       <div className="bg-white shadow-lg rounded-lg p-6 md:p-10 font-nunito">
-        {/* Responsive grid with custom proportions: left 2/5, right 3/5 */}
+        {/* Responsive grid with custom proportions */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           
           {/* LEFT SIDE: Contact Information (2/5) */}
@@ -39,13 +39,13 @@ const ContactUs = () => {
               <input
                 type="text"
                 placeholder="First Name*"
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
                 required
               />
               <input
                 type="text"
                 placeholder="Last Name*"
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
                 required
               />
             </div>
@@ -55,19 +55,19 @@ const ContactUs = () => {
               <input
                 type="email"
                 placeholder="Mail Address*"
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
                 required
               />
               <input
                 type="tel"
                 placeholder="Phone Number"
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
 
             {/* Choose Properties */}
             <select
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
             >
               <option value="">Choose Properties</option>
               <option value="house">House</option>
@@ -79,7 +79,7 @@ const ContactUs = () => {
             <textarea
               rows="4"
               placeholder="Enter Message"
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
             ></textarea>
 
             {/* Submit Button */}
