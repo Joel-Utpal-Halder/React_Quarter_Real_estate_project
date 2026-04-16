@@ -14,8 +14,8 @@ const ContactUs = () => {
   return (
     <>
       <Container>
-        {/* Card wrapper */}
-        <div className="bg-white shadow-lg rounded-lg my-20 font-nunito overflow-hidden">
+        {/* Card wrapper with full shadow */}
+        <div className="bg-white shadow-2xl shadow-gray-400 my-20 font-nunito overflow-hidden">
           {/* Card content */}
           <div className="p-6 md:p-10">
             {/* Responsive grid with custom proportions */}
@@ -50,7 +50,7 @@ const ContactUs = () => {
                     <input
                       type="text"
                       placeholder="First Name*"
-                      className="w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-md px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full bg-gray-100 text-gray-700 border border-gray-300 px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-orange-500"
                       required
                     />
                     <FaUser className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 transition-colors duration-200 group-hover:text-orange-500 group-focus-within:text-orange-500" />
@@ -59,7 +59,7 @@ const ContactUs = () => {
                     <input
                       type="text"
                       placeholder="Last Name*"
-                      className="w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-md px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full bg-gray-100 text-gray-700 border border-gray-300 px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-orange-500"
                       required
                     />
                     <FaUser className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 transition-colors duration-200 group-hover:text-orange-500 group-focus-within:text-orange-500" />
@@ -72,7 +72,7 @@ const ContactUs = () => {
                     <input
                       type="email"
                       placeholder="Mail Address*"
-                      className="w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-md px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full bg-gray-100 text-gray-700 border border-gray-300 px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-orange-500"
                       required
                     />
                     <FaAt className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 transition-colors duration-200 group-hover:text-orange-500 group-focus-within:text-orange-500" />
@@ -81,7 +81,7 @@ const ContactUs = () => {
                     <input
                       type="tel"
                       placeholder="Phone Number"
-                      className="w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-md px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full bg-gray-100 text-gray-700 border border-gray-300 px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-orange-500"
                     />
                     <FaMobileAlt className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 transition-colors duration-200 group-hover:text-orange-500 group-focus-within:text-orange-500" />
                   </div>
@@ -89,7 +89,7 @@ const ContactUs = () => {
 
                 {/* Choose Properties */}
                 <select
-                  className="w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  className="w-full bg-gray-100 text-gray-700 border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
                 >
                   <option value="">Choose Properties</option>
                   <option value="house">House</option>
@@ -102,16 +102,16 @@ const ContactUs = () => {
                   <textarea
                     rows="4"
                     placeholder="Enter Message"
-                    className="w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-md px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    className="w-full bg-gray-100 text-gray-700 border border-gray-300 px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-orange-500"
                   ></textarea>
-                  <FaRegCommentDots className="absolute right-3 top-6 text-gray-400 transition-colors duration-200 group-hover:text-orange-500 group-focus-within:text-orange-500" />
+                  <FaRegCommentDots className="absolute right-3 top-3 text-gray-400 transition-colors duration-200 group-hover:text-orange-500 group-focus-within:text-orange-500" />
                 </div>
 
                 {/* Submit Button */}
-                <div className="flex justify-center">
+                <div className="flex justify-start">
                   <button
                     type="submit"
-                    className="w-2/5 bg-orange-500 text-white font-semibold py-3 px-4 rounded-md hover:bg-orange-600 transition-colors"
+                    className="w-2/5 bg-orange-500 text-white font-semibold py-3 px-4 hover:bg-orange-600 transition-colors"
                   >
                     Submit Request →
                   </button>
@@ -123,7 +123,7 @@ const ContactUs = () => {
       </Container>
 
       {/* Full-width gray strip across site */}
-      <div className="w-full h-30 -mb-17 bg-gray-300"></div>
+      <div className="w-full h-40 -mb-17 bg-gray-300"></div>
     </>
   );
 };
