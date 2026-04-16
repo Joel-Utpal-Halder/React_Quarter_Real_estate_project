@@ -17,7 +17,7 @@ const ContactUs = () => {
         {/* Card wrapper with full shadow */}
         <div className="bg-white shadow-2xl shadow-gray-400 my-20 font-nunito overflow-hidden">
           {/* Card content */}
-          <div className="p-6 md:p-10">
+          <div className="p-6 md:p-16">
             {/* Responsive grid with custom proportions */}
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
               {/* LEFT SIDE: Contact Information (2/5) */}
@@ -26,19 +26,37 @@ const ContactUs = () => {
                   Feel free to contact us for any query.
                 </h2>
 
-                <div className="flex items-center space-x-3">
-                  <FaPhoneAlt className="text-orange-500" />
-                  <p className="text-gray-700">Head office: (210) 123 451</p>
+                {/* Phone */}
+                <div className="flex items-start space-x-3">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-500">
+                    <FaPhoneAlt className="text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-gray-600">Phone Number:</p>
+                    <p className="text-gray-700">Head office: (210) 123 451</p>
+                  </div>
                 </div>
 
-                <div className="flex items-center space-x-3">
-                  <FaEnvelope className="text-orange-500" />
-                  <p className="text-gray-700">webecyenvato12@gmail.com</p>
+                {/* Email */}
+                <div className="flex items-start space-x-3">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-500">
+                    <FaEnvelope className="text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-gray-600">Mail Address:</p>
+                    <p className="text-gray-700">webecyenvato12@gmail.com</p>
+                  </div>
                 </div>
 
-                <div className="flex items-center space-x-3">
-                  <FaMapMarkerAlt className="text-orange-500" />
-                  <p className="text-gray-700">254 Lillian Blvd, Holbrook</p>
+                {/* Office Address */}
+                <div className="flex items-start space-x-3">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-500">
+                    <FaMapMarkerAlt className="text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-gray-600">Office Address:</p>
+                    <p className="text-gray-700">254 Lillian Blvd, Holbrook</p>
+                  </div>
                 </div>
               </div>
 
@@ -123,7 +141,7 @@ const ContactUs = () => {
       </Container>
 
       {/* Full-width gray strip across site */}
-      <div className="w-full h-40 -mb-17 bg-gray-300"></div>
+      <div className="w-full h-40 bg-gray-300"></div>
     </>
   );
 };
