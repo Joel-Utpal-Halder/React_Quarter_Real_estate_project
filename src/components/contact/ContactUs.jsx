@@ -27,9 +27,9 @@ const ContactUs = () => {
                 </h2>
 
                 {/* Phone */}
-                <div className="flex items-start space-x-3">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-500">
-                    <FaPhoneAlt className="text-white" />
+                <div className="flex items-start space-x-3 rounded-full transition-colors duration-200 hover:bg-orange-50">
+                  <div className="flex items-center justify-center w-15 h-15 rounded-full bg-orange-500 text-white">
+                    <FaPhoneAlt />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-gray-600">Phone Number:</p>
@@ -38,9 +38,9 @@ const ContactUs = () => {
                 </div>
 
                 {/* Email */}
-                <div className="flex items-start space-x-3">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-500">
-                    <FaEnvelope className="text-white" />
+                <div className="flex items-start space-x-3 rounded-full transition-colors duration-200 hover:bg-orange-50">
+                  <div className="flex items-center justify-center w-15 h-15 rounded-full bg-orange-500 text-white">
+                    <FaEnvelope />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-gray-600">Mail Address:</p>
@@ -49,9 +49,9 @@ const ContactUs = () => {
                 </div>
 
                 {/* Office Address */}
-                <div className="flex items-start space-x-3">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-500">
-                    <FaMapMarkerAlt className="text-white" />
+                <div className="flex items-start space-x-3 rounded-full transition-colors duration-200 hover:bg-orange-50">
+                  <div className="flex items-center justify-center w-15 h-15 rounded-full bg-orange-500 text-white">
+                    <FaMapMarkerAlt />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-gray-600">Office Address:</p>
