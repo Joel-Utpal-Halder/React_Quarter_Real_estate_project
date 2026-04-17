@@ -22,12 +22,12 @@ const ContactUs = () => {
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
               {/* LEFT SIDE: Contact Information (2/5) */}
               <div className="md:col-span-2 space-y-6">
-                <h2 className="text-2xl font-bold text-gray-800">
+                <h2 className="text-3xl font-bold text-gray-800">
                   Feel free to contact us for any query.
                 </h2>
 
                 {/* Phone */}
-                <div className="flex items-center space-x-3 rounded-full transition-colors duration-200 hover:bg-orange-50">
+                <div className="flex items-center space-x-3 rounded-full transition-colors duration-200 hover:bg-orange-100">
                   <div className="flex items-center justify-center w-15 h-15 rounded-full bg-orange-500 text-white">
                     <FaPhoneAlt />
                   </div>
@@ -38,18 +38,18 @@ const ContactUs = () => {
                 </div>
 
                 {/* Email */}
-                <div className="flex items-center space-x-3 rounded-full transition-colors duration-200 hover:bg-orange-50">
+                <div className="flex items-center space-x-3 rounded-full transition-colors duration-200 hover:bg-orange-100">
                   <div className="flex items-center justify-center w-15 h-15 rounded-full bg-orange-500 text-white">
                     <FaEnvelope />
                   </div>
                   <div>
                     <p className="text-sm font-bold text-gray-600">Mail Address:</p>
-                    <p className="text-gray-700">webecyenvato12@gmail.com</p>
+                    <p className="text-gray-700">webecyenvato@gmail.com</p>
                   </div>
                 </div>
 
                 {/* Office Address */}
-                <div className="flex items-center space-x-3 rounded-full transition-colors duration-200 hover:bg-orange-50">
+                <div className="flex items-center space-x-3 rounded-full transition-colors duration-200 hover:bg-orange-100">
                   <div className="flex items-center justify-center w-15 h-15 rounded-full bg-orange-500 text-white">
                     <FaMapMarkerAlt />
                   </div>
@@ -141,7 +141,7 @@ const ContactUs = () => {
       </Container>
 
       {/* Full-width gray strip across site */}
-      <div className="w-full h-40 bg-gray-300"></div>
+      <div className="w-full h-40 bg-gray-300 -mb-17"></div>
     </>
   );
 };
