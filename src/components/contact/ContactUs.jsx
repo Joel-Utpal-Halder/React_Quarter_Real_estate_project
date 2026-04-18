@@ -8,7 +8,9 @@ import {
   FaAt,
   FaMobileAlt,
   FaRegCommentDots,
+  FaChevronDown, // ✅ Added for Choose Properties
 } from "react-icons/fa";
+
 
 const ContactUs = () => {
   return (
@@ -106,14 +108,20 @@ const ContactUs = () => {
                 </div>
 
                 {/* Choose Properties */}
-                <select
-                  className="w-full bg-gray-100 text-gray-700 border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                >
-                  <option value="">Choose Properties</option>
-                  <option value="house">House</option>
-                  <option value="apartment">Apartment</option>
-                  <option value="office">Office</option>
-                </select>
+                <div className="relative group">
+                  <select
+                    className="w-full bg-gray-100 border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 appearance-none"
+                    style={{ color: '#374151' }} // Tailwind gray-700 hex
+                  >
+                    <option value="">Choose Properties</option>
+                    <option value="house">House</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="office">Office</option>
+                  </select>
+
+                  {/* Custom dropdown arrow using react-icons */}
+                  <FaChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 transition-colors duration-200 group-hover:text-orange-500 group-focus-within:text-orange-500 pointer-events-none" />
+                </div>
 
                 {/* Message */}
                 <div className="relative group">
