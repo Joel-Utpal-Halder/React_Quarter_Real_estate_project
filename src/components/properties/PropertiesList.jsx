@@ -50,10 +50,9 @@ const PropertiesList = () => {
             About 6,920 results (0.52 seconds)
           </p>
 
-{/* Filters inside card */}
 <aside className="bg-white rounded-lg shadow-md p-4">
   {/* Property Type */}
-  <div className="mb-4">
+  <div className="mb-4 max-h-40 overflow-y-auto">
     <h3 className="font-medium text-gray-700 mb-2">Property Type</h3>
     <ul className="space-y-1 text-sm text-gray-600">
       <li className="flex justify-between items-center">
@@ -74,11 +73,55 @@ const PropertiesList = () => {
         </label>
         <span className="text-gray-500">2,912</span>
       </li>
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Apartment
+        </label>
+        <span className="text-gray-500">2,912</span>
+      </li>
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Apartment
+        </label>
+        <span className="text-gray-500">2,912</span>
+      </li>
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Apartment
+        </label>
+        <span className="text-gray-500">2,912</span>
+      </li>
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Apartment
+        </label>
+        <span className="text-gray-500">2,912</span>
+      </li>
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Apartment
+        </label>
+        <span className="text-gray-500">2,912</span>
+      </li>
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Apartment
+        </label>
+        <span className="text-gray-500">2,912</span>
+      </li>
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Apartment
+        </label>
+        <span className="text-gray-500">2,912</span>
+      </li>
+      {/* Add more items to test scroll */}
     </ul>
   </div>
+      <hr className="border-t border-gray-200 mt-2" />
 
   {/* Amenities */}
-  <div className="mb-4">
+  <div className="mb-4 max-h-40 overflow-y-auto">
     <h3 className="font-medium text-gray-700 mb-2">Amenities</h3>
     <ul className="space-y-1 text-sm text-gray-600">
       <li className="flex justify-between items-center">
@@ -99,14 +142,54 @@ const PropertiesList = () => {
         </label>
         <span className="text-gray-500">2,340</span>
       </li>
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Internet
+        </label>
+        <span className="text-gray-500">2,340</span>
+      </li>
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Internet
+        </label>
+        <span className="text-gray-500">2,340</span>
+      </li>
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Internet
+        </label>
+        <span className="text-gray-500">2,340</span>
+      </li>
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Internet
+        </label>
+        <span className="text-gray-500">2,340</span>
+      </li>
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Internet
+        </label>
+        <span className="text-gray-500">2,340</span>
+      </li>
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Internet
+        </label>
+        <span className="text-gray-500">2,340</span>
+      </li>
+      {/* Add more items to test scroll */}
     </ul>
+    <hr className="border-t border-gray-200 mt-2" />
   </div>
 
-  {/* Add more groups (Price Range, Bed/Bath, Category, etc.) in the same pattern */}
+  {/* Repeat same pattern for Price Range, Bed/Bath, Category */}
 </aside>
 
 
-          
+
+
+
         </div>
 
 
