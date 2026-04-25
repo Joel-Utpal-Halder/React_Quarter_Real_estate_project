@@ -18,11 +18,11 @@ body {
 
 /* 🔶 Custom Scrollbar Styles */
 ::-webkit-scrollbar {
-  width: 8px; /* thin scrollbar */
+  width: 4px; /* thin scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-  background: #f3f4f6; /* Tailwind gray-200 */
+  background: #fcd8bf; /* Tailwind gray-200 */
 }
 
 ::-webkit-scrollbar-thumb {
