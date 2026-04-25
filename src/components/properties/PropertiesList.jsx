@@ -1,5 +1,3 @@
-// File: src/components/properties/PropertiesList.jsx
-
 import React from "react";
 import { FaSearch, FaDollarSign, FaBed, FaBath } from "react-icons/fa";
 import Container from "../commonComponents/Container";
@@ -14,7 +12,7 @@ const properties = [
     beds: 2,
     baths: 1,
     status: "For Rent",
-    image: "/assets/images/propertiesPage/properties_1.png",
+    image: "/src/assets/images/propertiesPage/properties_1.png",
   },
   {
     id: 2,
@@ -24,7 +22,7 @@ const properties = [
     beds: 3,
     baths: 2,
     status: "For Sale",
-    image: "/assets/images/propertiesPage/properties_2.png",
+    image: "/src/assets/images/propertiesPage/properties_2.png",
   },
   {
     id: 3,
@@ -34,7 +32,7 @@ const properties = [
     beds: 3,
     baths: 2,
     status: "For Rent",
-    image: "/assets/images/propertiesPage/properties_1.png",
+    image: "/src/assets/images/propertiesPage/properties_1.png",
   },
 ];
 
@@ -44,32 +42,37 @@ const PropertiesList = () => {
       {/* Main layout: 3 columns on large screens */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         
-        {/* LEFT COLUMN: Heading + text + filters */}
-        <aside className="bg-white rounded-lg shadow-md p-4">
-          <h2 className="text-lg font-semibold mb-1">Advance Information</h2>
-          <p className="text-xs text-gray-500 mb-4">
-            About 6,920 results (0.52 seconds)
-          </p>
+{/* LEFT COLUMN: Heading + text OUTSIDE card */}
+<div>
+  {/* Heading + text */}
+  <h2 className="text-lg font-semibold mb-1">Advance Information</h2>
+  <p className="text-xs text-gray-500 mb-4">
+    About 6,920 results (0.52 seconds)
+  </p>
 
-          {/* Example filter group */}
-          <div className="mb-4">
-            <h3 className="font-medium text-gray-700 mb-2">Property Type</h3>
-            <ul className="space-y-1 text-sm text-gray-600">
-              <li><input type="checkbox" /> House (3,924)</li>
-              <li><input type="checkbox" /> Single Family (3,610)</li>
-              <li><input type="checkbox" /> Apartment (2,912)</li>
-            </ul>
-          </div>
+  {/* Filters inside card */}
+  <aside className="bg-white rounded-lg shadow-md p-4">
+    {/* Example filter group */}
+    <div className="mb-4">
+      <h3 className="font-medium text-gray-700 mb-2">Property Type</h3>
+      <ul className="space-y-1 text-sm text-gray-600">
+        <li><input type="checkbox" /> House (3,924)</li>
+        <li><input type="checkbox" /> Single Family (3,610)</li>
+        <li><input type="checkbox" /> Apartment (2,912)</li>
+      </ul>
+    </div>
 
-          <div className="mb-4">
-            <h3 className="font-medium text-gray-700 mb-2">Amenities</h3>
-            <ul className="space-y-1 text-sm text-gray-600">
-              <li><input type="checkbox" /> Air Conditioning</li>
-              <li><input type="checkbox" /> Gym</li>
-              <li><input type="checkbox" /> Internet</li>
-            </ul>
-          </div>
-        </aside>
+    <div className="mb-4">
+      <h3 className="font-medium text-gray-700 mb-2">Amenities</h3>
+      <ul className="space-y-1 text-sm text-gray-600">
+        <li><input type="checkbox" /> Air Conditioning</li>
+        <li><input type="checkbox" /> Gym</li>
+        <li><input type="checkbox" /> Internet</li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
 
         {/* RIGHT SIDE: Search bar + labels + property cards */}
         <section className="lg:col-span-2 space-y-6">
