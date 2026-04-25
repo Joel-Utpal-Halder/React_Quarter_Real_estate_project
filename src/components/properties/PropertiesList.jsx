@@ -41,37 +41,73 @@ const PropertiesList = () => {
     <Container>
       {/* Main layout: 3 columns on large screens */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        
-{/* LEFT COLUMN: Heading + text OUTSIDE card */}
-<div>
-  {/* Heading + text */}
-  <h2 className="text-lg font-semibold mb-1">Advance Information</h2>
-  <p className="text-xs text-gray-500 mb-4">
-    About 6,920 results (0.52 seconds)
-  </p>
 
-  {/* Filters inside card */}
-  <aside className="bg-white rounded-lg shadow-md p-4">
-    {/* Example filter group */}
-    <div className="mb-4">
-      <h3 className="font-medium text-gray-700 mb-2">Property Type</h3>
-      <ul className="space-y-1 text-sm text-gray-600">
-        <li><input type="checkbox" /> House (3,924)</li>
-        <li><input type="checkbox" /> Single Family (3,610)</li>
-        <li><input type="checkbox" /> Apartment (2,912)</li>
-      </ul>
-    </div>
+        {/* LEFT COLUMN: Heading + text OUTSIDE card */}
+        <div>
+          {/* Heading + text */}
+          <h2 className="text-lg font-semibold mb-1">Advance Information</h2>
+          <p className="text-xs text-gray-500 mb-4">
+            About 6,920 results (0.52 seconds)
+          </p>
 
-    <div className="mb-4">
-      <h3 className="font-medium text-gray-700 mb-2">Amenities</h3>
-      <ul className="space-y-1 text-sm text-gray-600">
-        <li><input type="checkbox" /> Air Conditioning</li>
-        <li><input type="checkbox" /> Gym</li>
-        <li><input type="checkbox" /> Internet</li>
-      </ul>
-    </div>
-  </aside>
-</div>
+{/* Filters inside card */}
+<aside className="bg-white rounded-lg shadow-md p-4">
+  {/* Property Type */}
+  <div className="mb-4">
+    <h3 className="font-medium text-gray-700 mb-2">Property Type</h3>
+    <ul className="space-y-1 text-sm text-gray-600">
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> House
+        </label>
+        <span className="text-gray-500">3,924</span>
+      </li>
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Single Family
+        </label>
+        <span className="text-gray-500">3,610</span>
+      </li>
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Apartment
+        </label>
+        <span className="text-gray-500">2,912</span>
+      </li>
+    </ul>
+  </div>
+
+  {/* Amenities */}
+  <div className="mb-4">
+    <h3 className="font-medium text-gray-700 mb-2">Amenities</h3>
+    <ul className="space-y-1 text-sm text-gray-600">
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Air Conditioning
+        </label>
+        <span className="text-gray-500">1,200</span>
+      </li>
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Gym
+        </label>
+        <span className="text-gray-500">980</span>
+      </li>
+      <li className="flex justify-between items-center">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" /> Internet
+        </label>
+        <span className="text-gray-500">2,340</span>
+      </li>
+    </ul>
+  </div>
+
+  {/* Add more groups (Price Range, Bed/Bath, Category, etc.) in the same pattern */}
+</aside>
+
+
+          
+        </div>
 
 
         {/* RIGHT SIDE: Search bar + labels + property cards */}
