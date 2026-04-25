@@ -50,11 +50,11 @@ const PropertiesList = () => {
             About 6,920 results (0.52 seconds)
           </p>
 
-          <aside className="bg-white rounded-lg shadow-md p-4">
+          <aside className="bg-white rounded-lg shadow-md px-6 py-4">
             {/* Property Type */}
             <div className="mb-4 max-h-40 overflow-y-auto">
               <h3 className="font-medium text-gray-700 mb-2">Property Type</h3>
-              <ul className="space-y-1 text-sm text-gray-600">
+              <ul className="space-y-1 space-x-3 text-sm text-gray-600">
                 <li className="flex justify-between items-center">
                   <label className="flex items-center gap-2">
                     <input type="checkbox" /> House
@@ -75,33 +75,21 @@ const PropertiesList = () => {
                 </li>
                 <li className="flex justify-between items-center">
                   <label className="flex items-center gap-2">
-                    <input type="checkbox" /> Apartment
+                    <input type="checkbox" /> Office Villa
                   </label>
-                  <span className="text-gray-500">2,912</span>
+                  <span className="text-gray-500">2,687</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <label className="flex items-center gap-2">
-                    <input type="checkbox" /> Apartment
+                    <input type="checkbox" /> Luxary Home
                   </label>
-                  <span className="text-gray-500">2,912</span>
+                  <span className="text-gray-500">1,853</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <label className="flex items-center gap-2">
-                    <input type="checkbox" /> Apartment
+                    <input type="checkbox" /> Studio
                   </label>
-                  <span className="text-gray-500">2,912</span>
-                </li>
-                <li className="flex justify-between items-center">
-                  <label className="flex items-center gap-2">
-                    <input type="checkbox" /> Apartment
-                  </label>
-                  <span className="text-gray-500">2,912</span>
-                </li>
-                <li className="flex justify-between items-center">
-                  <label className="flex items-center gap-2">
-                    <input type="checkbox" /> Apartment
-                  </label>
-                  <span className="text-gray-500">2,912</span>
+                  <span className="text-gray-500">893</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <label className="flex items-center gap-2">
@@ -123,7 +111,7 @@ const PropertiesList = () => {
             {/* Amenities */}
             <div className="mb-4 max-h-40 overflow-y-auto">
               <h3 className="font-medium text-gray-700 mb-2">Amenities</h3>
-              <ul className="space-y-1 text-sm text-gray-600">
+              <ul className="space-y-1 space-x-3 text-sm text-gray-600">
                 <li className="flex justify-between items-center">
                   <label className="flex items-center gap-2">
                     <input type="checkbox" /> Air Conditioning
