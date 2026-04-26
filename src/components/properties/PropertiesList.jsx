@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaSearch, FaDollarSign, FaBed, FaBath } from "react-icons/fa";
+import { FaHeart, FaExpand, FaPowerOff, FaMapMarkerAlt } from "react-icons/fa";
 import Container from "../commonComponents/Container";
 
 // Dummy property data (replace with API later)
@@ -7,32 +8,69 @@ const properties = [
   {
     id: 1,
     title: "New Apartment Nice View",
-    location: "California",
-    price: "$2400.00/month",
-    beds: 2,
-    baths: 1,
+    location: "Belmont Gardens, Chicago",
+    price: "$349.00/Month",
+    beds: 3,
+    baths: 2,
+    area: 3450,
     status: "For Rent",
     image: "/src/assets/images/propertiesPage/properties_1.png",
+    isVideo: true,
   },
   {
     id: 2,
     title: "House Highland Ave Angeles",
-    location: "California",
-    price: "$340,000.00",
+    location: "Belmont Gardens, Chicago",
+    price: "$349.00/Month",
     beds: 3,
     baths: 2,
+    area: 3450,
     status: "For Sale",
     image: "/src/assets/images/propertiesPage/properties_2.png",
   },
   {
     id: 3,
     title: "Farm in Castro St Los Angeles",
-    location: "California",
-    price: "$2400.00/month",
+    location: "Belmont Gardens, Chicago",
+    price: "$349.00/Month",
     beds: 3,
     baths: 2,
+    area: 3450,
     status: "For Rent",
+    image: "/src/assets/images/propertiesPage/properties_2.png",
+  },
+  {
+    id: 4,
+    title: "Luxury Villa in Los Angeles",
+    location: "Belmont Gardens, Chicago",
+    price: "$349.00/Month",
+    beds: 3,
+    baths: 2,
+    area: 3450,
+    status: "For Sale",
     image: "/src/assets/images/propertiesPage/properties_1.png",
+  },
+  {
+    id: 5,
+    title: "Casa Lomas de Machalí",
+    location: "Belmont Gardens, Chicago",
+    price: "$349.00/Month",
+    beds: 3,
+    baths: 2,
+    area: 3450,
+    status: "For Sale",
+    image: "/src/assets/images/propertiesPage/properties_1.png",
+  },
+  {
+    id: 6,
+    title: "Single House Near Angeles",
+    location: "Belmont Gardens, Chicago",
+    price: "$349.00/Month",
+    beds: 3,
+    baths: 2,
+    area: 3450,
+    status: "For Sale",
+    image: "/src/assets/images/propertiesPage/properties_2.png",
   },
 ];
 
@@ -300,50 +338,89 @@ const PropertiesList = () => {
           </div>
 
           {/* Property cards grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
-            {properties.map((property) => (
-              <div
-                key={property.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+<div className="grid sm:grid-cols-2 gap-6">
+  {properties.map((property) => (
+    <div
+      key={property.id}
+      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+    >
+      {/* Property media (image or video thumbnail) */}
+      <div className="relative">
+        <img
+          src={property.image}
+          alt={property.title}
+          className="w-full h-48 object-cover"
+        />
+        {/* Optional play icon overlay if it's a video */}
+        {property.isVideo && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="bg-black bg-opacity-50 rounded-full p-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
               >
-                {/* Property image */}
-                <img
-                  src={property.image}
-                  alt={property.title}
-                  className="w-full h-48 object-cover"
-                />
-
-                {/* Property details */}
-                <div className="p-4 font-nunito">
-                  <span className="text-xs text-orange-600 font-bold uppercase">
-                    {property.status}
-                  </span>
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    {property.title}
-                  </h3>
-                  <p className="text-sm text-gray-500">{property.location}</p>
-
-                  {/* Price row */}
-                  <div className="flex items-center gap-2 mt-2">
-                    <FaDollarSign className="text-green-600" />
-                    <span className="text-gray-700 font-medium">
-                      {property.price}
-                    </span>
-                  </div>
-
-                  {/* Beds & Baths */}
-                  <div className="flex items-center gap-4 mt-3 text-sm text-gray-600">
-                    <span className="flex items-center gap-1">
-                      <FaBed /> {property.beds} Beds
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <FaBath /> {property.baths} Baths
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ))}
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
           </div>
+        )}
+      </div>
+
+      {/* Property details */}
+      <div className="p-4 font-nunito">
+        {/* Status */}
+        <span className="text-xs text-orange-600 font-bold">
+          {property.status}
+        </span>
+
+        <h3 className="text-lg font-semibold text-gray-800">
+          {property.title}
+        </h3>
+
+        {/* Location with icon */}
+        <p className="text-sm text-gray-500 flex items-center gap-1">
+          <FaMapMarkerAlt className="text-orange-500" />
+          {property.location}
+        </p>
+
+        {/* Beds, Baths, Sq Ft with bold numbers */}
+        <p className="text-sm text-gray-600 mt-2">
+          <span className="font-bold">{property.beds}</span> Bedrooms •{" "}
+          <span className="font-bold">{property.baths}</span> Bathrooms •{" "}
+          <span className="font-bold">{property.area}</span> Sq Ft
+        </p>
+
+        {/* Action icons row above price */}
+        <div className="flex gap-3 mt-4">
+          <button className="p-2 border rounded-md shadow-sm hover:bg-orange-500 hover:text-white transition">
+            <FaExpand />
+          </button>
+          <button className="p-2 border rounded-md shadow-sm hover:bg-orange-500 hover:text-white transition">
+            <FaHeart />
+          </button>
+          <button className="p-2 border rounded-md shadow-sm hover:bg-orange-500 hover:text-white transition">
+            <FaPowerOff />
+          </button>
+        </div>
+
+        {/* Divider line below icons */}
+        <hr className="border-t border-gray-200 mt-3" />
+
+        {/* Price row (orange text, no dollar icon) */}
+        <div className="mt-2">
+          <span className="text-orange-600 font-semibold">
+            {property.price}
+          </span>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
+
+
 
           {/* Pagination */}
           <div className="flex justify-center mt-8 gap-2">
@@ -353,13 +430,6 @@ const PropertiesList = () => {
             <button className="px-3 py-1 border rounded-md hover:bg-orange-500 hover:text-white transition">4</button>
           </div>
         </section>
-
-
-
-
-
-
-
       </div>
     </Container>
   );
