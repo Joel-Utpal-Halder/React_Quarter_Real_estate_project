@@ -94,7 +94,6 @@ const PropertiesList = () => {
               <hr className="border-t border-gray-200 mt-2" />
             </div>
 
-
             {/* Amenities */}
             <div className="mb-4 max-h-40 overflow-y-auto">
               <h3 className="font-medium text-gray-700 mb-2">Amenities</h3>
@@ -164,7 +163,6 @@ const PropertiesList = () => {
               </ul>
               <hr className="border-t border-gray-200 mt-2" />
             </div>
-
 
             {/* Price/Sq Ft Filter */}
             <div className="mb-4">
@@ -244,25 +242,61 @@ const PropertiesList = () => {
           </aside>
         </div>
 
-        {/* RIGHT SIDE: Search bar + labels + property cards */}
+        {/* RIGHT SIDE: Controls + search + property cards */}
         <section className="lg:col-span-2 space-y-6">
-          {/* Top bar with search + labels */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            {/* Search field */}
-            <div className="flex items-center gap-2 w-full sm:w-1/2">
-              <FaSearch className="text-gray-500" />
-              <input
-                type="text"
-                placeholder="Search For House Properties"
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
-              />
-            </div>
+          {/* Top controls */}
+          <div className="flex items-center justify-between mb-2">
+            {/* Left side (optional, can hold filters or stay empty) */}
+            <div></div>
 
-            {/* Labels */}
-            <div className="flex gap-4 text-sm text-gray-600">
-              <span>Per Page: 12</span>
-              <span>Sort By: Best Match</span>
+            {/* Right side: Per Page + Sort By + Icons */}
+            <div className="flex items-center gap-4">
+              {/* Per Page */}
+              <div className="flex items-center gap-2">
+                <label className="font-medium text-gray-700">Per Page:</label>
+                <select className="border border-gray-300 rounded-md px-2 py-1 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500">
+                  <option>12</option>
+                  <option>24</option>
+                  <option>48</option>
+                </select>
+              </div>
+
+              {/* Sort By */}
+              <div className="flex items-center gap-2">
+                <label className="font-medium text-gray-700">Sort By:</label>
+                <select className="border border-gray-300 rounded-md px-2 py-1 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500">
+                  <option>Best Match</option>
+                  <option>Lowest Price</option>
+                  <option>Highest Price</option>
+                </select>
+              </div>
+
+              {/* View toggle icons */}
+              <div className="flex gap-2">
+                <button className="p-2 border border-gray-300 rounded-md shadow-sm hover:bg-gray-100">
+                  {/* Grid icon */}
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h4v4H4V6zm0 8h4v4H4v-4zm6-8h4v4h-4V6zm0 8h4v4h-4v-4zm6-8h4v4h-4V6zm0 8h4v4h-4v-4z" />
+                  </svg>
+                </button>
+                <button className="p-2 border border-gray-300 rounded-md shadow-sm hover:bg-gray-100">
+                  {/* List icon */}
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </button>
+              </div>
             </div>
+          </div>
+
+          {/* Search bar */}
+          <div className="flex items-center w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-2">
+            <input
+              type="text"
+              placeholder="Search For More Properties"
+              className="w-full bg-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
+            />
+            <FaSearch className="text-gray-500 ml-2" />
           </div>
 
           {/* Property cards grid */}
@@ -313,20 +347,19 @@ const PropertiesList = () => {
 
           {/* Pagination */}
           <div className="flex justify-center mt-8 gap-2">
-            <button className="px-3 py-1 border rounded-md hover:bg-orange-500 hover:text-white transition">
-              1
-            </button>
-            <button className="px-3 py-1 border rounded-md hover:bg-orange-500 hover:text-white transition">
-              2
-            </button>
-            <button className="px-3 py-1 border rounded-md hover:bg-orange-500 hover:text-white transition">
-              3
-            </button>
-            <button className="px-3 py-1 border rounded-md hover:bg-orange-500 hover:text-white transition">
-              4
-            </button>
+            <button className="px-3 py-1 border rounded-md hover:bg-orange-500 hover:text-white transition">1</button>
+            <button className="px-3 py-1 border rounded-md hover:bg-orange-500 hover:text-white transition">2</button>
+            <button className="px-3 py-1 border rounded-md hover:bg-orange-500 hover:text-white transition">3</button>
+            <button className="px-3 py-1 border rounded-md hover:bg-orange-500 hover:text-white transition">4</button>
           </div>
         </section>
+
+
+
+
+
+
+
       </div>
     </Container>
   );
