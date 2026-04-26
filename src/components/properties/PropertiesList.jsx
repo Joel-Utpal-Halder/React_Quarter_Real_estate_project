@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaSearch, FaDollarSign, FaBed, FaBath } from "react-icons/fa";
 import Container from "../commonComponents/Container";
 
@@ -37,14 +37,13 @@ const properties = [
 ];
 
 const PropertiesList = () => {
+  const [price, setPrice] = useState(8000); // dynamic slider value
+
   return (
     <Container>
-      {/* Main layout: 3 columns on large screens */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-        {/* LEFT COLUMN: Heading + text OUTSIDE card */}
+        {/* LEFT COLUMN: Sidebar filters */}
         <div>
-          {/* Heading + text */}
           <h2 className="text-lg font-semibold mb-1">Advance Information</h2>
           <p className="text-xs text-gray-500 mb-4">
             About 6,920 results (0.52 seconds)
@@ -54,132 +53,196 @@ const PropertiesList = () => {
             {/* Property Type */}
             <div className="mb-4 max-h-40 overflow-y-auto">
               <h3 className="font-medium text-gray-700 mb-2">Property Type</h3>
-              <ul className="space-y-1 space-x-3 text-sm text-gray-600">
+              <ul className="space-y-1 text-sm text-gray-600">
                 <li className="flex justify-between items-center">
                   <label className="flex items-center gap-2">
                     <input type="checkbox" /> House
                   </label>
-                  <span className="text-gray-500">3,924</span>
+                  <span className="text-gray-500 pr-4">3,924</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <label className="flex items-center gap-2">
                     <input type="checkbox" /> Single Family
                   </label>
-                  <span className="text-gray-500">3,610</span>
+                  <span className="text-gray-500 pr-4">3,610</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <label className="flex items-center gap-2">
                     <input type="checkbox" /> Apartment
                   </label>
-                  <span className="text-gray-500">2,912</span>
+                  <span className="text-gray-500 pr-4">2,912</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <label className="flex items-center gap-2">
                     <input type="checkbox" /> Office Villa
                   </label>
-                  <span className="text-gray-500">2,687</span>
+                  <span className="text-gray-500 pr-4">2,687</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <label className="flex items-center gap-2">
-                    <input type="checkbox" /> Luxary Home
+                    <input type="checkbox" /> Luxury Home
                   </label>
-                  <span className="text-gray-500">1,853</span>
+                  <span className="text-gray-500 pr-4">1,853</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <label className="flex items-center gap-2">
                     <input type="checkbox" /> Studio
                   </label>
-                  <span className="text-gray-500">893</span>
+                  <span className="text-gray-500 pr-4">893</span>
                 </li>
-                <li className="flex justify-between items-center">
-                  <label className="flex items-center gap-2">
-                    <input type="checkbox" /> Apartment
-                  </label>
-                  <span className="text-gray-500">2,912</span>
-                </li>
-                <li className="flex justify-between items-center">
-                  <label className="flex items-center gap-2">
-                    <input type="checkbox" /> Apartment
-                  </label>
-                  <span className="text-gray-500">2,912</span>
-                </li>
-                {/* Add more items to test scroll */}
-              </ul>
-            </div>
-            <hr className="border-t border-gray-200 mt-2" />
-
-            {/* Amenities */}
-            <div className="mb-4 max-h-40 overflow-y-auto">
-              <h3 className="font-medium text-gray-700 mb-2">Amenities</h3>
-              <ul className="space-y-1 space-x-3 text-sm text-gray-600">
-                <li className="flex justify-between items-center">
-                  <label className="flex items-center gap-2">
-                    <input type="checkbox" /> Air Conditioning
-                  </label>
-                  <span className="text-gray-500">1,200</span>
-                </li>
-                <li className="flex justify-between items-center">
-                  <label className="flex items-center gap-2">
-                    <input type="checkbox" /> Gym
-                  </label>
-                  <span className="text-gray-500">980</span>
-                </li>
-                <li className="flex justify-between items-center">
-                  <label className="flex items-center gap-2">
-                    <input type="checkbox" /> Internet
-                  </label>
-                  <span className="text-gray-500">2,340</span>
-                </li>
-                <li className="flex justify-between items-center">
-                  <label className="flex items-center gap-2">
-                    <input type="checkbox" /> Internet
-                  </label>
-                  <span className="text-gray-500">2,340</span>
-                </li>
-                <li className="flex justify-between items-center">
-                  <label className="flex items-center gap-2">
-                    <input type="checkbox" /> Internet
-                  </label>
-                  <span className="text-gray-500">2,340</span>
-                </li>
-                <li className="flex justify-between items-center">
-                  <label className="flex items-center gap-2">
-                    <input type="checkbox" /> Internet
-                  </label>
-                  <span className="text-gray-500">2,340</span>
-                </li>
-                <li className="flex justify-between items-center">
-                  <label className="flex items-center gap-2">
-                    <input type="checkbox" /> Internet
-                  </label>
-                  <span className="text-gray-500">2,340</span>
-                </li>
-                <li className="flex justify-between items-center">
-                  <label className="flex items-center gap-2">
-                    <input type="checkbox" /> Internet
-                  </label>
-                  <span className="text-gray-500">2,340</span>
-                </li>
-                <li className="flex justify-between items-center">
-                  <label className="flex items-center gap-2">
-                    <input type="checkbox" /> Internet
-                  </label>
-                  <span className="text-gray-500">2,340</span>
-                </li>
-                {/* Add more items to test scroll */}
               </ul>
               <hr className="border-t border-gray-200 mt-2" />
             </div>
 
-            {/* Repeat same pattern for Price Range, Bed/Bath, Category */}
+
+            {/* Amenities */}
+            <div className="mb-4 max-h-40 overflow-y-auto">
+              <h3 className="font-medium text-gray-700 mb-2">Amenities</h3>
+              <ul className="space-y-1 text-sm text-gray-600">
+                <li className="flex justify-between items-center">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" /> Dishwasher
+                  </label>
+                  <span className="text-gray-500 pr-4">3,924</span>
+                </li>
+                <li className="flex justify-between items-center">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" /> Floor Coverings
+                  </label>
+                  <span className="text-gray-500 pr-4">3,610</span>
+                </li>
+                <li className="flex justify-between items-center">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" /> Internet
+                  </label>
+                  <span className="text-gray-500 pr-4">2,912</span>
+                </li>
+                <li className="flex justify-between items-center">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" /> Build Wardrobes
+                  </label>
+                  <span className="text-gray-500 pr-4">2,687</span>
+                </li>
+                <li className="flex justify-between items-center">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" /> Supermarket
+                  </label>
+                  <span className="text-gray-500 pr-4">1,853</span>
+                </li>
+                <li className="flex justify-between items-center">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" /> Kids Zone
+                  </label>
+                  <span className="text-gray-500 pr-4">893</span>
+                </li>
+              </ul>
+              <hr className="border-t border-gray-200 mt-2" />
+            </div>
+
+            {/* Price Range */}
+            <div className="mb-4 max-h-40 overflow-y-auto">
+              <h3 className="font-medium text-gray-700 mb-2">Price Range</h3>
+              <ul className="space-y-1 text-sm text-gray-600">
+                <li className="flex justify-between items-center">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" /> Low Budget
+                  </label>
+                  <span className="text-gray-500 pr-4">3,924</span>
+                </li>
+                <li className="flex justify-between items-center">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" /> Medium
+                  </label>
+                  <span className="text-gray-500 pr-4">3,610</span>
+                </li>
+                <li className="flex justify-between items-center">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" /> High Budget
+                  </label>
+                  <span className="text-gray-500 pr-4">2,912</span>
+                </li>
+              </ul>
+              <hr className="border-t border-gray-200 mt-2" />
+            </div>
+
+
+            {/* Price/Sq Ft Filter */}
+            <div className="mb-4">
+              <h3 className="font-medium text-gray-700 mb-2">Price/Sq Ft Filter</h3>
+              <input
+                type="range"
+                min="0"
+                max="8000"
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+                className="w-full accent-orange-500"
+              />
+              <div className="flex justify-between mt-2">
+                <span className="text-sm text-gray-600">From $0</span>
+                <span className="text-sm text-gray-600 mr-3">To ${price}</span>
+              </div>
+              <hr className="border-t border-gray-200 mt-2" />
+            </div>
+
+            {/* Bed/Bath */}
+            <div className="mb-4 max-h-40 overflow-y-auto">
+              <h3 className="font-medium text-gray-700 mb-2">Bed/Bath</h3>
+              <ul className="space-y-1 text-sm text-gray-600">
+                <li className="flex justify-between items-center">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" /> Single
+                  </label>
+                  <span className="text-gray-500 pr-4">3,924</span>
+                </li>
+                <li className="flex justify-between items-center">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" /> Double
+                  </label>
+                  <span className="text-gray-500 pr-4">3,610</span>
+                </li>
+                <li className="flex justify-between items-center">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" /> Up To 3
+                  </label>
+                  <span className="text-gray-500 pr-4">2,912</span>
+                </li>
+                <li className="flex justify-between items-center">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" /> Up To 5
+                  </label>
+                  <span className="text-gray-500 pr-4">2,819</span>
+                </li>
+              </ul>
+              <hr className="border-t border-gray-200 mt-2" />
+            </div>
+
+            {/* Category */}
+            <div className="mb-4 max-h-40 overflow-y-auto">
+              <h3 className="font-medium text-gray-700 mb-2">Category</h3>
+              <ul className="space-y-1 text-sm text-gray-600">
+                <li className="flex justify-between items-center">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" /> Buying
+                  </label>
+                  <span className="text-gray-500 pr-4">3,924</span>
+                </li>
+                <li className="flex justify-between items-center">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" /> Renting
+                  </label>
+                  <span className="text-gray-500 pr-4">3,610</span>
+                </li>
+                <li className="flex justify-between items-center">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" /> Selling
+                  </label>
+                  <span className="text-gray-500 pr-4">2,912</span>
+                </li>
+              </ul>
+              <hr className="border-t border-gray-200 mt-2" />
+            </div>
           </aside>
-
-
-
-
-
         </div>
-
 
         {/* RIGHT SIDE: Search bar + labels + property cards */}
         <section className="lg:col-span-2 space-y-6">
