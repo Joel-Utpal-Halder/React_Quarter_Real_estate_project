@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaSearch, FaDollarSign, FaBed, FaBath } from "react-icons/fa";
-import { FaHeart, FaExpand, FaPowerOff, FaMapMarkerAlt, FaThLarge, FaList } from "react-icons/fa";
+import { FaHeart, FaExpand, FaPowerOff, FaMapMarkerAlt, FaThLarge, FaList, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Container from "../commonComponents/Container";
 
 // Dummy property data (replace with API later)
@@ -16,6 +16,7 @@ const properties = [
     status: "For Rent",
     image: "/src/assets/images/propertiesPage/properties_1.png",
     isVideo: true,
+    videoUrl: "https://example.com/video1.mp4",
   },
   {
     id: 2,
@@ -27,6 +28,8 @@ const properties = [
     area: 3450,
     status: "For Sale",
     image: "/src/assets/images/propertiesPage/properties_2.png",
+    isVideo: true,
+    videoUrl: "https://example.com/video1.mp4",
   },
   {
     id: 3,
@@ -38,6 +41,8 @@ const properties = [
     area: 3450,
     status: "For Rent",
     image: "/src/assets/images/propertiesPage/properties_2.png",
+    isVideo: true,
+    videoUrl: "https://example.com/video1.mp4",
   },
   {
     id: 4,
@@ -49,6 +54,8 @@ const properties = [
     area: 3450,
     status: "For Sale",
     image: "/src/assets/images/propertiesPage/properties_1.png",
+    isVideo: true,
+    videoUrl: "https://example.com/video1.mp4",
   },
   {
     id: 5,
@@ -60,6 +67,8 @@ const properties = [
     area: 3450,
     status: "For Sale",
     image: "/src/assets/images/propertiesPage/properties_1.png",
+    isVideo: true,
+    videoUrl: "https://example.com/video1.mp4",
   },
   {
     id: 6,
@@ -71,15 +80,25 @@ const properties = [
     area: 3450,
     status: "For Sale",
     image: "/src/assets/images/propertiesPage/properties_2.png",
+    isVideo: true,
+    videoUrl: "https://example.com/video1.mp4",
   },
 ];
 
 const PropertiesList = () => {
   const [price, setPrice] = useState(8000); // dynamic slider value
+  const handleVideoClick = (property) => {
+    if (property.videoUrl) {
+      // Example: open in new tab
+      window.open(property.videoUrl, "_blank");
+    } else {
+      alert(`Play video for ${property.title}`);
+    }
+  };
 
   return (
     <Container>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-20 mb-25">
         {/* LEFT COLUMN: Sidebar filters */}
         <div>
           <h2 className="text-lg font-semibold mb-1">Advance Information</h2>
@@ -342,16 +361,20 @@ const PropertiesList = () => {
                 className="bg-white rounded-sm shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
                 {/* Property media (image or video thumbnail) */}
-                <div className="relative">
+                <div
+                  className="relative cursor-pointer"
+                  onClick={() => handleVideoClick(property)}
+                >
                   <img
                     src={property.image}
                     alt={property.title}
                     className="w-full h-48 object-cover"
                   />
-                  {/* Optional play icon overlay if it's a video */}
                   {property.isVideo && (
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="bg-black bg-opacity-50 rounded-full p-3">
+                      <div className="rounded-full p-3 bg-black bg-opacity-50 
+                      hover:bg-orange-500 hover:bg-opacity-100 
+                      transition duration-300">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="h-6 w-6 text-white"
@@ -377,13 +400,13 @@ const PropertiesList = () => {
                   </h3>
 
                   {/* Location with icon */}
-                  <p className="text-sm text-gray-500 flex items-center gap-1">
+                  <p className="text-[0.8rem] text-gray-500 flex items-center gap-1 mt-2">
                     <FaMapMarkerAlt className="text-orange-500" />
                     {property.location}
                   </p>
 
                   {/* Beds, Baths, Sq Ft with bold numbers */}
-                  <p className="text-sm text-gray-600 mt-2">
+                  <p className="text-[0.8rem] text-gray-600 mt-2">
                     <span className="font-bold">{property.beds}</span> Bedrooms •{" "}
                     <span className="font-bold">{property.baths}</span> Bathrooms •{" "}
                     <span className="font-bold">{property.area}</span> Sq Ft
@@ -418,10 +441,21 @@ const PropertiesList = () => {
 
           {/* Pagination */}
           <div className="flex justify-center mt-8 gap-2">
+            {/* Left arrow */}
+            <button className="px-3 py-1 border rounded-sm shadow-sm hover:bg-orange-500 hover:text-white transition">
+              <FaArrowLeft className="h-4 w-4" />
+            </button>
+
+            {/* Page numbers */}
             <button className="px-3 py-1 border rounded-sm hover:bg-orange-500 hover:text-white transition">1</button>
             <button className="px-3 py-1 border rounded-sm hover:bg-orange-500 hover:text-white transition">2</button>
             <button className="px-3 py-1 border rounded-sm hover:bg-orange-500 hover:text-white transition">3</button>
             <button className="px-3 py-1 border rounded-sm hover:bg-orange-500 hover:text-white transition">4</button>
+
+            {/* Right arrow */}
+            <button className="px-3 py-1 border rounded-sm shadow-sm hover:bg-orange-500 hover:text-white transition">
+              <FaArrowRight className="h-4 w-4" />
+            </button>
           </div>
         </section>
       </div>
