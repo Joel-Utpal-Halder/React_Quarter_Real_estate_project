@@ -237,61 +237,115 @@ const BlogDetails = () => {
 
         {/* RIGHT SIDE: Sidebar */}
         <div className="space-y-8">
+
           {/* Profile Card */}
-          <div className="bg-gray-100 p-6 rounded-sm shadow-md text-center">
-            <FaUser className="text-4xl text-orange-500 mx-auto mb-3" />
+          <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            {/* Profile Image */}
+            <div className="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-2 border-orange-500">
+              <img
+                src={blogImage} // replace with actual profile image
+                alt="Profile"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Name + Occupation */}
             <h4 className="text-lg font-bold text-gray-800">Jehnny Rose</h4>
-            <p className="text-sm text-gray-600">Web Developer</p>
-            <p className="text-gray-600 mt-2">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            <p className="text-sm text-gray-600">Traveller / Photographer</p>
+            {/* Star Rating */}
+            <div className="flex items-center justify-center mt-2">
+              <span className="text-orange-500">★</span>
+              <span className="text-orange-500">★</span>
+              <span className="text-orange-500">★</span>
+              <span className="text-orange-500">★</span>
+              <span className="text-gray-400">★</span>
+              <span className="ml-2 text-sm text-gray-600">(1 Review)</span>
+            </div>
+            {/* Bio */}
+            <p className="text-gray-600 mt-2 text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
             </p>
+            {/* Social Icons */}
+            <div className="flex justify-center gap-4 mt-4">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+                className="group w-8 h-8 flex items-center justify-center rounded-full bg-white shadow-sm cursor-pointer transition hover:bg-orange-500">
+                <FaFacebookF className="text-gray-600 text-sm transition group-hover:text-white" />
+              </a>
+              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"
+                className="group w-8 h-8 flex items-center justify-center rounded-full bg-white shadow-sm cursor-pointer transition hover:bg-orange-500">
+                <FaTwitter className="text-gray-600 text-sm transition group-hover:text-white" />
+              </a>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                className="group w-8 h-8 flex items-center justify-center rounded-full bg-white shadow-sm cursor-pointer transition hover:bg-orange-500">
+                <FaInstagram className="text-gray-600 text-sm transition group-hover:text-white" />
+              </a>
+              <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"
+                className="group w-8 h-8 flex items-center justify-center rounded-full bg-white shadow-sm cursor-pointer transition hover:bg-orange-500">
+                <FaGoogle className="text-gray-600 text-sm transition group-hover:text-white" />
+              </a>
+            </div>
           </div>
 
           {/* Search Bar */}
-          <div className="bg-gray-100 p-6 rounded-sm shadow-md">
-            <h4 className="text-lg font-bold text-gray-800 mb-4">Search Bar</h4>
-            <div className="flex items-center border rounded-sm overflow-hidden">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            {/* Heading with left orange bar */}
+            <div className="flex items-center mb-4">
+              <div className="w-1 h-6 bg-orange-500 mr-2 rounded"></div>
+              <h4 className="text-lg font-bold text-gray-800">Search Bar</h4>
+            </div>
+
+            {/* Input + Button */}
+            <div className="flex border rounded-lg overflow-hidden">
               <input
                 type="text"
-                placeholder="Search..."
-                className="flex-grow px-3 py-2 outline-none text-sm"
+                placeholder="Search Blogs"
+                className="flex-grow px-3 py-2 text-sm text-gray-700 outline-none focus:ring-2 focus:ring-orange-500"
               />
-              <button className="bg-orange-500 text-white px-4 py-2">
-                <FaSearch />
+              <button
+                className="bg-orange-500 text-white px-5 py-2 flex items-center justify-center hover:bg-orange-600 transition"
+              >
+                <FaSearch className="w-4 h-4" />
               </button>
             </div>
           </div>
 
+
+
           {/* Contact Form */}
-          <div className="bg-gray-100 p-6 rounded-sm shadow-md">
-            <h4 className="text-lg font-bold text-gray-800 mb-4">
-              Drop Message For Book
-            </h4>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h4 className="text-lg font-bold text-gray-800 mb-4">Drop Message For Book</h4>
             <form className="space-y-4">
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full px-3 py-2 border rounded-sm text-sm outline-none"
+                className="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-orange-500"
               />
               <input
                 type="email"
                 placeholder="Your Email"
-                className="w-full px-3 py-2 border rounded-sm text-sm outline-none"
+                className="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-orange-500"
               />
               <textarea
                 placeholder="Write Message"
                 rows="4"
-                className="w-full px-3 py-2 border rounded-sm text-sm outline-none"
+                className="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-orange-500"
               ></textarea>
               <button
                 type="submit"
-                className="w-full bg-orange-500 text-white py-2 rounded-sm font-semibold hover:bg-orange-600 transition"
+                className="w-full bg-orange-500 text-white py-2 rounded-lg font-semibold hover:bg-orange-600 transition"
               >
                 Send Message
               </button>
             </form>
           </div>
         </div>
+
+
+
+
+
+
+
+
       </div>
     </Container>
   );
