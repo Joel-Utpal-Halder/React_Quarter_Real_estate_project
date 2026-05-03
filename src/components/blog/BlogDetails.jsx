@@ -5,7 +5,7 @@ import blogImage from "../../assets/images/blogPage/blog_1.png";
 import videoImage from "../../assets/images/blogPage/video_1.png";
 import reviewImage from "../../assets/images/blogPage/reviews_1.png";
 import latestPropertiesImage from "../../assets/images/blogPage/latestProperties_1.png";
-import { FaUser, FaPlay, FaFacebookF, FaTwitter, FaInstagram, FaGoogle } from "react-icons/fa";
+import { FaUser, FaPlay, FaFacebookF, FaTwitter, FaInstagram, FaGoogle, FaAt, FaRegCommentDots } from "react-icons/fa";
 
 const BlogDetails = () => {
   return (
@@ -239,7 +239,7 @@ const BlogDetails = () => {
         <div className="space-y-8">
 
           {/* Profile Card */}
-          <div className="bg-white p-6 rounded-lg shadow-md text-center">
+          <div className="bg-white p-6 rounded-sm shadow-md text-center">
             {/* Profile Image */}
             <div className="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-2 border-orange-500">
               <img
@@ -286,7 +286,7 @@ const BlogDetails = () => {
           </div>
 
           {/* Search Bar */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white p-6 rounded-sm shadow-md">
             {/* Heading with left orange bar */}
             <div className="flex items-center mb-4">
               <div className="w-1 h-6 bg-orange-500 mr-2 rounded"></div>
@@ -294,7 +294,7 @@ const BlogDetails = () => {
             </div>
 
             {/* Input + Button */}
-            <div className="flex border rounded-lg overflow-hidden">
+            <div className="flex border rounded-sm overflow-hidden">
               <input
                 type="text"
                 placeholder="Search Blogs"
@@ -308,44 +308,60 @@ const BlogDetails = () => {
             </div>
           </div>
 
-
-
           {/* Contact Form */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h4 className="text-lg font-bold text-gray-800 mb-4">Drop Message For Book</h4>
+          <div className="bg-gray-100 p-6 rounded-sm shadow-md">
+            {/* Heading */}
+            <h4 className="text-lg font-bold text-gray-800 mb-4">Drop Messege For Book</h4>
+
             <form className="space-y-4">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-orange-500"
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-orange-500"
-              />
-              <textarea
-                placeholder="Write Message"
-                rows="4"
-                className="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-orange-500"
-              ></textarea>
+              {/* Name Field */}
+              <div className="flex items-center border rounded-sm px-3 py-2 focus-within:ring-2 focus-within:ring-orange-500 bg-white">
+                <FaUser className="text-gray-500 mr-2" />
+                <input
+                  type="text"
+                  placeholder="Your Name*"
+                  required
+                  className="flex-grow text-sm outline-none bg-white"
+                />
+              </div>
+
+              {/* Email Field */}
+              <div className="flex items-center border rounded-sm px-3 py-2 focus-within:ring-2 focus-within:ring-orange-500 bg-white">
+                <FaAt className="text-gray-500 mr-2" />
+                <input
+                  type="email"
+                  placeholder="Your Email*"
+                  required
+                  className="flex-grow text-sm outline-none bg-white"
+                />
+              </div>
+
+              {/* Message Field */}
+              <div className="flex items-start border rounded-sm px-3 py-2 focus-within:ring-2 focus-within:ring-orange-500 bg-white">
+                <FaRegCommentDots className="text-gray-500 mr-2 mt-1" />
+                <textarea
+                  placeholder="Write Messege"
+                  rows="4"
+                  className="flex-grow text-sm outline-none bg-white"
+                ></textarea>
+              </div>
+
+              {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-orange-500 text-white py-2 rounded-lg font-semibold hover:bg-orange-600 transition"
+                className="w-full bg-orange-500 text-white py-2 rounded-sm font-semibold hover:bg-orange-600 transition"
               >
-                Send Message
+                Send Messege
               </button>
             </form>
           </div>
+
+
+
+
+
+
         </div>
-
-
-
-
-
-
-
-
       </div>
     </Container>
   );
