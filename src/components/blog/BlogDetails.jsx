@@ -5,6 +5,7 @@ import blogImage from "../../assets/images/blogPage/blog_1.png";
 import videoImage from "../../assets/images/blogPage/video_1.png";
 import reviewImage from "../../assets/images/blogPage/reviews_1.png";
 import latestPropertiesImage from "../../assets/images/blogPage/latestProperties_1.png";
+import popularPropertiesImage from "../../assets/images/blogPage/popularProperties.png";
 import { FaUser, FaPlay, FaFacebookF, FaTwitter, FaInstagram, FaGoogle, FaAt, FaRegCommentDots } from "react-icons/fa";
 
 const BlogDetails = () => {
@@ -226,15 +227,6 @@ const BlogDetails = () => {
           </div>
         </div>
 
-
-
-
-
-
-
-
-
-
         {/* RIGHT SIDE: Sidebar */}
         <div className="space-y-8">
 
@@ -428,7 +420,6 @@ const BlogDetails = () => {
             </div>
           </div>
 
-
           {/* Top Categories Section */}
           <div className="bg-white p-6 rounded-sm shadow-md mt-8">
             {/* Heading with left orange bar */}
@@ -462,6 +453,45 @@ const BlogDetails = () => {
             </ul>
           </div>
 
+          {/* Popular Properties Section */}
+          <div className="bg-white p-6 rounded-sm shadow-md mt-8">
+            {/* Heading with left orange bar */}
+            <div className="flex items-center mb-6">
+              <div className="w-1 h-6 bg-orange-500 mr-2 rounded"></div>
+              <h3 className="text-xl font-bold text-gray-800">Popular Properties</h3>
+            </div>
+
+            {/* Property Card */}
+            <div className="bg-gray-100 rounded-sm shadow-sm overflow-hidden">
+              {/* Property Image */}
+              <img
+                src={popularPropertiesImage} // replace with actual image
+                alt="Property"
+                className="w-full h-48 object-cover"
+              />
+
+              {/* Property Details */}
+              <div className="p-4 space-y-2">
+                {/* Price */}
+                <p className="text-orange-500 font-bold text-md">$349,00/Month</p>
+
+                {/* Property Name */}
+                <h4 className="text-md font-semibold text-gray-800">
+                  New Apartment Nice View
+                </h4>
+
+                {/* Location */}
+                <p className="text-xs text-gray-600">Belmont Gardens, Chicago</p>
+
+                {/* Specifications */}
+                <div className="flex flex-wrap gap-4 text-[10px] text-gray-700 font-semibold mt-2">
+                  <span>3 Bedrooms</span>
+                  <span>2 Bathrooms</span>
+                  <span>3450 Sq Ft</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
 
