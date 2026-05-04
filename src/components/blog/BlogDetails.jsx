@@ -356,77 +356,112 @@ const BlogDetails = () => {
             </form>
           </div>
 
-{/* Latest Properties Section */}
-<div className="bg-white p-6 rounded-sm shadow-md mt-8">
-  {/* Heading with left orange bar */}
-  <div className="flex items-center mb-6">
-    <div className="w-1 h-6 bg-orange-500 mr-2 rounded"></div>
-    <h3 className="text-xl font-bold text-gray-800">Latest Properties</h3>
-  </div>
+          {/* Latest Properties Section */}
+          <div className="bg-white p-6 rounded-sm shadow-md mt-8">
+            {/* Heading with left orange bar */}
+            <div className="flex items-center mb-6">
+              <div className="w-1 h-6 bg-orange-500 mr-2 rounded"></div>
+              <h3 className="text-xl font-bold text-gray-800">Latest Properties</h3>
+            </div>
 
-  {/* Properties List */}
-  <div className="space-y-3">
-    {/* Property Card 1 */}
-    <div className="flex items-center bg-gray-100 rounded-sm shadow-sm overflow-hidden p-2">
-      <img
-        src={latestPropertiesImage} // replace with actual image
-        alt="Property"
-        className="w-16 h-16 object-cover" // smaller image, no rounded corners
-      />
-      <div className="ml-3">
-        <p className="text-orange-500 font-bold text-xs">$320,000</p>
-        <h4 className="text-xs font-semibold text-gray-800">
-          Neue Dimensionen im Schrägdach
-        </h4>
-      </div>
-    </div>
+            {/* Properties List */}
+            <div className="space-y-3">
+              {/* Property Card 1 */}
+              <div className="flex items-center bg-gray-100 rounded-sm shadow-sm overflow-hidden p-2">
+                <img
+                  src={latestPropertiesImage} // replace with actual image
+                  alt="Property"
+                  className="w-16 h-16 object-cover" // smaller image, no rounded corners
+                />
+                <div className="ml-3">
+                  <p className="text-orange-500 font-bold text-xs">$320,000</p>
+                  <h4 className="text-xs font-semibold text-gray-800">
+                    Neue Dimensionen im Schrägdach
+                  </h4>
+                </div>
+              </div>
 
-    {/* Property Card 2 */}
-    <div className="flex items-center bg-gray-100 rounded-sm shadow-sm overflow-hidden p-2">
-      <img
-        src={latestPropertiesImage}
-        alt="Property"
-        className="w-16 h-16 object-cover"
-      />
-      <div className="ml-3">
-        <p className="text-orange-500 font-bold text-xs">$750,000</p>
-        <h4 className="text-xs font-semibold text-gray-800">
-          Langs Beach House
-        </h4>
-      </div>
-    </div>
+              {/* Property Card 2 */}
+              <div className="flex items-center bg-gray-100 rounded-sm shadow-sm overflow-hidden p-2">
+                <img
+                  src={latestPropertiesImage}
+                  alt="Property"
+                  className="w-16 h-16 object-cover"
+                />
+                <div className="ml-3">
+                  <p className="text-orange-500 font-bold text-xs">$750,000</p>
+                  <h4 className="text-xs font-semibold text-gray-800">
+                    Langs Beach House
+                  </h4>
+                </div>
+              </div>
 
-    {/* Property Card 3 */}
-    <div className="flex items-center bg-gray-100 rounded-sm shadow-sm overflow-hidden p-2">
-      <img
-        src={latestPropertiesImage}
-        alt="Property"
-        className="w-16 h-16 object-cover"
-      />
-      <div className="ml-3">
-        <p className="text-orange-500 font-bold text-xs">$880,000</p>
-        <h4 className="text-xs font-semibold text-gray-800">
-          Eaton Garth Penthouse
-        </h4>
-      </div>
-    </div>
+              {/* Property Card 3 */}
+              <div className="flex items-center bg-gray-100 rounded-sm shadow-sm overflow-hidden p-2">
+                <img
+                  src={latestPropertiesImage}
+                  alt="Property"
+                  className="w-16 h-16 object-cover"
+                />
+                <div className="ml-3">
+                  <p className="text-orange-500 font-bold text-xs">$880,000</p>
+                  <h4 className="text-xs font-semibold text-gray-800">
+                    Eaton Garth Penthouse
+                  </h4>
+                </div>
+              </div>
 
-    {/* Property Card 4 */}
-    <div className="flex items-center bg-gray-100 rounded-sm shadow-sm overflow-hidden p-2">
-      <img
-        src={latestPropertiesImage}
-        alt="Property"
-        className="w-16 h-16 object-cover"
-      />
-      <div className="ml-3">
-        <p className="text-orange-500 font-bold text-xs">$880,000</p>
-        <h4 className="text-xs font-semibold text-gray-800">
-          Eaton Garth Penthouse
-        </h4>
-      </div>
-    </div>
-  </div>
-</div>
+              {/* Property Card 4 */}
+              <div className="flex items-center bg-gray-100 rounded-sm shadow-sm overflow-hidden p-2">
+                <img
+                  src={latestPropertiesImage}
+                  alt="Property"
+                  className="w-16 h-16 object-cover"
+                />
+                <div className="ml-3">
+                  <p className="text-orange-500 font-bold text-xs">$880,000</p>
+                  <h4 className="text-xs font-semibold text-gray-800">
+                    Eaton Garth Penthouse
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          {/* Top Categories Section */}
+          <div className="bg-white p-6 rounded-sm shadow-md mt-8">
+            {/* Heading with left orange bar */}
+            <div className="flex items-center mb-4">
+              <div className="w-1 h-6 bg-orange-500 mr-2 rounded"></div>
+              <h3 className="text-lg font-bold text-gray-800">Top Catagories</h3>
+            </div>
+
+            {/* Categories List */}
+            <ul className="space-y-3">
+              <li className="flex justify-between items-center text-sm bg-orange-50 px-3 py-2 rounded-sm">
+                <span className="text-orange-500">Apartment</span>
+                <span className="text-orange-500">(14)</span>
+              </li>
+              <li className="flex justify-between items-center text-sm bg-orange-50 px-3 py-2 rounded-sm">
+                <span className="text-orange-500">Picture Studio</span>
+                <span className="text-orange-500">(14)</span>
+              </li>
+              <li className="flex justify-between items-center text-sm bg-orange-50 px-3 py-2 rounded-sm">
+                <span className="text-orange-500">Office</span>
+                <span className="text-orange-500">(14)</span>
+              </li>
+              <li className="flex justify-between items-center text-sm bg-orange-50 px-3 py-2 rounded-sm">
+                <span className="text-orange-500">Luxary Vilas</span>
+                <span className="text-orange-500">(14)</span>
+              </li>
+              <li className="flex justify-between items-center text-sm bg-orange-50 px-3 py-2 rounded-sm">
+                <span className="text-orange-500">Duplex House</span>
+                <span className="text-orange-500">(14)</span>
+              </li>
+            </ul>
+          </div>
+
 
 
 
