@@ -490,8 +490,21 @@ const BlogDetails = () => {
                   <span>3450 Sq Ft</span>
                 </div>
               </div>
+
+              {/* Divider line */}
+              <hr className="border-t border-gray-300 mt-2" />
+
+              {/* Navigation dots */}
+              <div className="flex justify-center space-x-2 p-3">
+                <button className="w-2 h-2 rounded-full bg-orange-200 hover:bg-orange-400 focus:bg-orange-500 transition"></button>
+                <button className="w-2 h-2 rounded-full bg-orange-200 hover:bg-orange-400 focus:bg-orange-500 transition"></button>
+                <button className="w-2 h-2 rounded-full bg-orange-200 hover:bg-orange-400 focus:bg-orange-500 transition"></button>
+                <button className="w-2 h-2 rounded-full bg-orange-200 hover:bg-orange-400 focus:bg-orange-500 transition"></button>
+                <button className="w-2 h-2 rounded-full bg-orange-200 hover:bg-orange-400 focus:bg-orange-500 transition"></button>
+              </div>
             </div>
           </div>
+
 
 
 
