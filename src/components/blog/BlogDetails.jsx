@@ -1,5 +1,7 @@
 import React from "react";
 import { FaCalendarAlt, FaCommentDots, FaSearch } from "react-icons/fa";
+import { FaUser, FaPlay, FaFacebookF, FaTwitter, FaInstagram, FaGoogle, FaAt, FaRegCommentDots } from "react-icons/fa";
+import { FaDribbble, FaGooglePlusG } from "react-icons/fa";
 import Container from "../commonComponents/Container"; // Reuse common container
 import blogImage from "../../assets/images/blogPage/blog_1.png";
 import videoImage from "../../assets/images/blogPage/video_1.png";
@@ -7,7 +9,8 @@ import reviewImage from "../../assets/images/blogPage/reviews_1.png";
 import latestPropertiesImage from "../../assets/images/blogPage/latestProperties_1.png";
 import popularPropertiesImage from "../../assets/images/blogPage/popularProperties.png";
 import latestBlogsImage from "../../assets/images/blogPage/latestBlogs_1.png";
-import { FaUser, FaPlay, FaFacebookF, FaTwitter, FaInstagram, FaGoogle, FaAt, FaRegCommentDots } from "react-icons/fa";
+
+
 
 const BlogDetails = () => {
   return (
@@ -506,75 +509,131 @@ const BlogDetails = () => {
             </div>
           </div>
 
-{/* Latest Blogs Section */}
+          {/* Latest Blogs Section */}
+          <div className="bg-white p-6 rounded-sm shadow-md mt-8">
+            {/* Heading with left orange bar */}
+            <div className="flex items-center mb-6">
+              <div className="w-1 h-6 bg-orange-500 mr-2 rounded"></div>
+              <h3 className="text-xl font-bold text-gray-800">Leatest Blogs</h3>
+            </div>
+
+            {/* Blog List */}
+            <div className="space-y-4">
+              {/* Blog Item 1 */}
+              <div className="flex items-center bg-gray-100 rounded-sm shadow-sm p-2">
+                <img
+                  src={latestBlogsImage}
+                  alt="Blog"
+                  className="w-16 h-16 object-cover"
+                />
+                <div className="ml-3">
+                  <p className="text-xs text-gray-500">27 July, 2020</p>
+                  <h4 className="text-sm font-semibold text-gray-800">
+                    It is a long established Cont popular traditional
+                  </h4>
+                </div>
+              </div>
+
+              {/* Blog Item 2 */}
+              <div className="flex items-center bg-gray-100 rounded-sm shadow-sm p-2">
+                <img
+                  src={latestBlogsImage}
+                  alt="Blog"
+                  className="w-16 h-16 object-cover"
+                />
+                <div className="ml-3">
+                  <p className="text-xs text-gray-500">27 July, 2020</p>
+                  <h4 className="text-sm font-semibold text-gray-800">
+                    Contrary to popular tradi lorem ipsum is not simply
+                  </h4>
+                </div>
+              </div>
+
+              {/* Blog Item 3 */}
+              <div className="flex items-center bg-gray-100 rounded-sm shadow-sm p-2">
+                <img
+                  src={latestBlogsImage}
+                  alt="Blog"
+                  className="w-16 h-16 object-cover"
+                />
+                <div className="ml-3">
+                  <p className="text-xs text-gray-500">27 July, 2020</p>
+                  <h4 className="text-sm font-semibold text-gray-800">
+                    Lorem Ipsum has been the industry’s standard dummy
+                  </h4>
+                </div>
+              </div>
+
+              {/* Blog Item 4 */}
+              <div className="flex items-center bg-gray-100 rounded-sm shadow-sm p-2">
+                <img
+                  src={latestBlogsImage}
+                  alt="Blog"
+                  className="w-16 h-16 object-cover"
+                />
+                <div className="ml-3">
+                  <p className="text-xs text-gray-500">27 July, 2020</p>
+                  <h4 className="text-sm font-semibold text-gray-800">
+                    It is a long established Cont popular traditional
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+{/* Follow Us Section */}
 <div className="bg-white p-6 rounded-sm shadow-md mt-8">
   {/* Heading with left orange bar */}
-  <div className="flex items-center mb-6">
+  <div className="flex items-center mb-4">
     <div className="w-1 h-6 bg-orange-500 mr-2 rounded"></div>
-    <h3 className="text-xl font-bold text-gray-800">Leatest Blogs</h3>
+    <h3 className="text-lg font-bold text-gray-800">Follow Us</h3>
   </div>
 
-  {/* Blog List */}
-  <div className="space-y-4">
-    {/* Blog Item 1 */}
-    <div className="flex items-center bg-gray-100 rounded-sm shadow-sm p-2">
-      <img
-        src={latestBlogsImage}
-        alt="Blog"
-        className="w-16 h-16 object-cover"
-      />
-      <div className="ml-3">
-        <p className="text-xs text-gray-500">27 July, 2020</p>
-        <h4 className="text-sm font-semibold text-gray-800">
-          It is a long established Cont popular traditional
-        </h4>
-      </div>
-    </div>
+  {/* Social Media Icons */}
+  <div className="flex gap-4">
+    {/* Facebook */}
+    <a
+      href="https://facebook.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-black 
+                 transition hover:bg-orange-500 hover:text-white"
+    >
+      <FaFacebookF />
+    </a>
 
-    {/* Blog Item 2 */}
-    <div className="flex items-center bg-gray-100 rounded-sm shadow-sm p-2">
-      <img
-        src={latestBlogsImage}
-        alt="Blog"
-        className="w-16 h-16 object-cover"
-      />
-      <div className="ml-3">
-        <p className="text-xs text-gray-500">27 July, 2020</p>
-        <h4 className="text-sm font-semibold text-gray-800">
-          Contrary to popular tradi lorem ipsum is not simply
-        </h4>
-      </div>
-    </div>
+    {/* Twitter */}
+    <a
+      href="https://twitter.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-black 
+                 transition hover:bg-orange-500 hover:text-white"
+    >
+      <FaTwitter />
+    </a>
 
-    {/* Blog Item 3 */}
-    <div className="flex items-center bg-gray-100 rounded-sm shadow-sm p-2">
-      <img
-        src={latestBlogsImage}
-        alt="Blog"
-        className="w-16 h-16 object-cover"
-      />
-      <div className="ml-3">
-        <p className="text-xs text-gray-500">27 July, 2020</p>
-        <h4 className="text-sm font-semibold text-gray-800">
-          Lorem Ipsum has been the industry’s standard dummy
-        </h4>
-      </div>
-    </div>
+    {/* Dribbble */}
+    <a
+      href="https://dribbble.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-black 
+                 transition hover:bg-orange-500 hover:text-white"
+    >
+      <FaDribbble />
+    </a>
 
-    {/* Blog Item 4 */}
-    <div className="flex items-center bg-gray-100 rounded-sm shadow-sm p-2">
-      <img
-        src={latestBlogsImage}
-        alt="Blog"
-        className="w-16 h-16 object-cover"
-      />
-      <div className="ml-3">
-        <p className="text-xs text-gray-500">27 July, 2020</p>
-        <h4 className="text-sm font-semibold text-gray-800">
-          It is a long established Cont popular traditional
-        </h4>
-      </div>
-    </div>
+    {/* Google Plus */}
+    <a
+      href="https://plus.google.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-black 
+                 transition hover:bg-orange-500 hover:text-white"
+    >
+      <FaGooglePlusG />
+    </a>
   </div>
 </div>
 
