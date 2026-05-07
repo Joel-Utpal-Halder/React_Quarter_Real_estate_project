@@ -581,59 +581,92 @@ const BlogDetails = () => {
             </div>
           </div>
 
-{/* Follow Us Section */}
+          {/* Follow Us Section */}
+          <div className="bg-white p-6 rounded-sm shadow-md mt-8">
+            {/* Heading with left orange bar */}
+            <div className="flex items-center mb-4">
+              <div className="w-1 h-6 bg-orange-500 mr-2 rounded"></div>
+              <h3 className="text-lg font-bold text-gray-800">Follow Us</h3>
+            </div>
+
+            {/* Social Media Icons */}
+            <div className="flex gap-4">
+              {/* Facebook */}
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-black 
+                 transition hover:bg-orange-500 hover:text-white"
+              >
+                <FaFacebookF />
+              </a>
+
+              {/* Twitter */}
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-black 
+                 transition hover:bg-orange-500 hover:text-white"
+              >
+                <FaTwitter />
+              </a>
+
+              {/* Dribbble */}
+              <a
+                href="https://dribbble.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-black 
+                 transition hover:bg-orange-500 hover:text-white"
+              >
+                <FaDribbble />
+              </a>
+
+              {/* Google Plus */}
+              <a
+                href="https://plus.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-black 
+                 transition hover:bg-orange-500 hover:text-white"
+              >
+                <FaGooglePlusG />
+              </a>
+            </div>
+          </div>
+
+{/* Tags Section */}
 <div className="bg-white p-6 rounded-sm shadow-md mt-8">
   {/* Heading with left orange bar */}
   <div className="flex items-center mb-4">
     <div className="w-1 h-6 bg-orange-500 mr-2 rounded"></div>
-    <h3 className="text-lg font-bold text-gray-800">Follow Us</h3>
+    <h3 className="text-lg font-bold text-gray-800">Tags</h3>
   </div>
 
-  {/* Social Media Icons */}
-  <div className="flex gap-4">
-    {/* Facebook */}
-    <a
-      href="https://facebook.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-black 
-                 transition hover:bg-orange-500 hover:text-white"
-    >
-      <FaFacebookF />
-    </a>
-
-    {/* Twitter */}
-    <a
-      href="https://twitter.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-black 
-                 transition hover:bg-orange-500 hover:text-white"
-    >
-      <FaTwitter />
-    </a>
-
-    {/* Dribbble */}
-    <a
-      href="https://dribbble.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-black 
-                 transition hover:bg-orange-500 hover:text-white"
-    >
-      <FaDribbble />
-    </a>
-
-    {/* Google Plus */}
-    <a
-      href="https://plus.google.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 text-black 
-                 transition hover:bg-orange-500 hover:text-white"
-    >
-      <FaGooglePlusG />
-    </a>
+  {/* Tags List */}
+  <div className="flex flex-wrap gap-3">
+    <button className="px-4 py-1 text-sm rounded-sm bg-gray-200 text-gray-700 
+                       hover:bg-orange-500 hover:text-white transition">
+      Business
+    </button>
+    <button className="px-4 py-1 text-sm rounded-sm bg-gray-200 text-gray-700 
+                       hover:bg-orange-500 hover:text-white transition">
+      Offices
+    </button>
+    <button className="px-4 py-1 text-sm rounded-sm bg-gray-200 text-gray-700 
+                       hover:bg-orange-500 hover:text-white transition">
+      Organic
+    </button>
+    <button className="px-4 py-1 text-sm rounded-sm bg-gray-200 text-gray-700 
+                       hover:bg-orange-500 hover:text-white transition">
+      Pastas
+    </button>
+    <button className="px-4 py-1 text-sm rounded-sm bg-gray-200 text-gray-700 
+                       hover:bg-orange-500 hover:text-white transition">
+      Topics
+    </button>
   </div>
 </div>
 
