@@ -10,8 +10,6 @@ import latestPropertiesImage from "../../assets/images/blogPage/latestProperties
 import popularPropertiesImage from "../../assets/images/blogPage/popularProperties.png";
 import latestBlogsImage from "../../assets/images/blogPage/latestBlogs_1.png";
 
-
-
 const BlogDetails = () => {
   return (
     <Container>
@@ -637,48 +635,42 @@ const BlogDetails = () => {
             </div>
           </div>
 
-{/* Tags Section */}
-<div className="bg-white p-6 rounded-sm shadow-md mt-8">
-  {/* Heading with left orange bar */}
-  <div className="flex items-center mb-4">
-    <div className="w-1 h-6 bg-orange-500 mr-2 rounded"></div>
-    <h3 className="text-lg font-bold text-gray-800">Tags</h3>
-  </div>
+          {/* Tags Section */}
+          <div className="bg-white p-6 shadow-md mt-8">
+            {/* Heading with left orange bar */}
+            <div className="flex items-center mb-4">
+              <div className="w-1 h-6 bg-orange-500 mr-2"></div>
+              <h3 className="text-lg font-bold text-gray-800">Tags</h3>
+            </div>
 
-  {/* Tags List */}
-  <div className="flex flex-wrap gap-3">
-    <button className="px-4 py-1 text-sm rounded-sm bg-gray-200 text-gray-700 
+            {/* Tags List */}
+            <div className="grid grid-cols-3 gap-3">
+              <button className="flex items-center justify-center px-4 py-2 text-sm border border-orange-500 text-orange-500 
                        hover:bg-orange-500 hover:text-white transition">
-      Business
-    </button>
-    <button className="px-4 py-1 text-sm rounded-sm bg-gray-200 text-gray-700 
+                Business
+              </button>
+              <button className="flex items-center justify-center px-4 py-2 text-sm border border-orange-500 text-orange-500 
                        hover:bg-orange-500 hover:text-white transition">
-      Offices
-    </button>
-    <button className="px-4 py-1 text-sm rounded-sm bg-gray-200 text-gray-700 
+                Offices
+              </button>
+              <button className="flex items-center justify-center px-4 py-2 text-sm border border-orange-500 text-orange-500 
                        hover:bg-orange-500 hover:text-white transition">
-      Organic
-    </button>
-    <button className="px-4 py-1 text-sm rounded-sm bg-gray-200 text-gray-700 
+                Organic
+              </button>
+              <button className="flex items-center justify-center px-4 py-2 text-sm border border-orange-500 text-orange-500 
                        hover:bg-orange-500 hover:text-white transition">
-      Pastas
-    </button>
-    <button className="px-4 py-1 text-sm rounded-sm bg-gray-200 text-gray-700 
+                Pastas
+              </button>
+              <button className="flex items-center justify-center px-4 py-2 text-sm border border-orange-500 text-orange-500 
                        hover:bg-orange-500 hover:text-white transition">
-      Topics
-    </button>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
+                Business
+              </button>
+              <button className="flex items-center justify-center px-4 py-2 text-sm border border-orange-500 text-orange-500 
+                       hover:bg-orange-500 hover:text-white transition">
+                Topics
+              </button>
+            </div>
+          </div>
 
         </div>
       </div>
